@@ -1,0 +1,1112 @@
+<!-- <?php
+    require('../../../functions_helpers.php'); /*load helper*/
+    check_session(); /*check session by employee */
+    $course_code = $_GET['course_code']; /* recibir el código del curso */
+    //$module_id        = __my_simple_crypt__($_GET['module'], 'd');
+    $module_id = 344;
+    $unique_course_id = check_permission_employee_course($course_code); /* Comprobar si el empleado tiene acceso al curso*/
+    $extension_url = "?course_code=" . $course_code; /* variable url para pasar el código del curso*/
+    
+    
+    $progress = progress_courses($course_code,$module_id);
+
+?> -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- library bootstrap v.5.0.2 -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cards.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-utilities.css">
+	<script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.esm.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.js"></script>
+	<script src="assets/js/jquery-3.3.1.js"></script>
+	<script src="assets/js/touch-dnd.js"></script>
+	<!-- library cascading style sheets -->
+	<link rel="stylesheet" type="text/css" href="assets/css/all.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styleSlider.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/actividades.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700">
+
+    <!-- Para mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="assets/js/jplayer/lib/circle-player/skin/circle.player.css">
+    <script type="text/javascript" src="assets/js/jplayer/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/dist/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/jquery.transform2d.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/jquery.grab.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/mod.csstransforms.min.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/circle.player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="assets/js/magnify/css/magnify.css" />
+
+
+</head>
+<body style="padding-left: 0px !important; padding-right: 0px !important;">
+    <input type="hidden" id="course_code" value="<?= $course_code ?>">
+	<input type="hidden" id="module_id" value="<?= $module_id ?>">
+    <!-- Header con el logo -->
+    <div class="header">
+       <!-- header -->
+	<div class="contentHeader">
+		<div>
+			<img class="logoTop" src="assets/imagenes/logo_1981png.png">
+			<div></div>
+			<!-- button home -->
+			<div>
+				<button id="home" onclick="progCircle(1);">
+					<i class="fas fa-home"></i>
+				</button>
+			</div>
+			<!-- progress counter -->
+			<div class="txPg">
+				<span id="textProg">1</span> / <span id="nSlider"></span>
+			</div>
+			<i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
+		</div>
+		<!--menu-->
+		<div class="headerOpc">
+			<i class="fas fa-times"></i>
+			<br>
+			<!-- <h1>Hola! <b><?= ucwords($CI->session->userdata('employee_data')['fullname']); ?></b></h1> -->
+			<h1>Hola! <b>Nombre user</b></h1>
+			<h5>Bienvenido a su Ruta de Aprendizaje!</h5>
+			<div class="headerProg">
+			    <p><b>Progreso: </b><span id="course-progress"><strong>
+				<?= $progress[0]['course_progress'];?>%</span></strong></p>
+			</div>
+			<hr>
+			<ul>
+				<a href="index.html">
+				<!-- <a href="index.php?course_code=<?= $course_code; ?>"> -->
+					<li><i class="fas fa-caret-right"></i> Presentación</li>
+				</a>
+				<a href="modulo.html" class="act">
+				<!-- <a href="modulo.php?course_code=<?= $course_code; ?>" class="act"> -->
+					<li><i class="fas fa-caret-right"></i> Contenido</li>
+				</a>
+				<a href="quiz.html">
+				<!-- <a href="quiz.php?course_code=<?= $course_code; ?>"> -->
+					<li><i class="fas fa-caret-right"></i> Evaluación</li>
+				</a>
+			</ul>
+			<hr>
+			<ul>
+				<a href="index.html">
+				<!-- <a href="../../../../courses/login.php"> -->
+					<li><i class="fas fa-caret-right"></i> Mis cursos</li>
+				</a>
+				<a href="modulo.html">
+				<!-- <a href="../../../../courses/logout.php"> -->
+					<li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
+				</a>
+			</ul>
+			<span class="infSof">© Sofactia. powered by Unydos</span>
+		</div>
+	</div>
+    </div>
+<!-- content fluid -->
+<div class="container-fluid" style="position: relative; height: 100vh;">
+<!-- content slider -->
+<div class="ctMd">
+<!-- content module-->
+<div class="contentModule">
+
+    <!-- slider01 welcome -->   
+  
+    <!--Inicio seccion de bienvenido-->
+    <div class="container current">
+        <div class="row">
+            <!-- Columna izquierda - Blanco -->
+            <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco-bienvenida" >
+                <div class="padding-left-1">
+                    <h1 class="dx2-v2" style="color: var(--primary);  padding-top: 18%;">Te damos la bienvenida a nuestro equipo</h1>   
+                    <p style="text-align: justify; padding-top: 5%; padding-bottom: 5%">Estamos encantados de darte la bienvenida
+                        a través de este módulo virtual, diseñado especialmente para guiarte como nuevo colaborador de nuestra empresa. Queremos
+                        facilitarte una hoja de ruta que te permita
+                        identificarte y moverte con confianza dentro de nuestra organización</p>
+                </div>
+                
+            </div>
+
+             <!-- Carrusel -->
+
+            <div class="col-lg-6 col-inline slider-box" id="carrusel">
+                
+            </div>
+         
+         
+        </div>
+    </div>
+    <!--Fin seccion bienvenido-->
+
+
+    <!--Pantalla estrucutra tematica-->
+    <div class="container divided-backgroundv3">
+        <div class="row ">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-12 col-md-12">
+                <h1 class="text-center" style="color: var(--white)">Estructura <span style="color: var(--grey);"> temática</span></h1>
+                <h4 style="color: var(--white);" class="mb-5 text-center">En este curso encontrarás 3 secciones claves de acercamiento
+                    a nuestra organización, <br />continúa adelante para irlos revisando en el mismo orden.</h4>
+            </div>
+            
+            <!-- Columna derecha - azul oscuro -->
+            <div class="col-lg-12 col-md-12 ">
+                <div class="contenido-central-2">
+                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
+                        <div class="col-lg-3 col-md-12">
+                            <img  class="img-estructura"  src="assets/img/Seccion1.png">
+                        </div>
+                        <div class="col-lg-1 col-md-12">
+                            <img  class="img-estructura2"  src="assets/img/flechas-5.png">
+                        </div>
+                        <div class="col-lg-3  col-md-12">
+                            <img  class="img-estructura"  src="assets/img/seccion2.png">
+                        </div>
+                        <div class="col-lg-1 col-md-12">
+                            <img  class="img-estructura2"  src="assets/img/flechas-5.png">
+                        </div>
+                        <div class="col-lg-3  col-md-12">
+                            <img class="img-estructura" src="assets/img/seccion3.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin estrucuta tematica-->
+
+    <!--Inicio Seccion 01-->
+    <div class="container back dividerImgSeccion1" id="dividerImgSeccion1">
+        <div class="row">
+            <!--<div>
+                <p class="indPag">
+                    <a href="#"><span style="font-weight: 900;">>Sección 1</span> / <span style="font-weight: 700;">Inducción Q&HS</span> / <span style="font-weight: 100;">Sección 1</span></a>
+                </p>
+                <span class="indPagMb"></span>
+            </div>-->
+            <div class="hide-nine-back">
+                <img src="assets/img/Fondo-seccion1.jpg" alt="">
+            </div>
+            
+            <div class="col-lg-6 col-md-12 left">
+                <h1 class="dx3-v2">¿Quienes somos?</h1>
+                <hr class="hr-custom"> 
+                <h4 class="dx2-v3">Sección 1</h4>
+            </div>
+        </div>
+    </div>
+    <!--Fin Seccion1-->
+
+    <!--Inicio Nuestro proposito superior-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco2" >
+                <div class="padding-left-1 ">
+                    <h1 style="padding-top: 18%; color: var(--primary80)">Nuestro <span style="color: var(--primary);"> propósito</span>
+                        <br> superior</h1>
+                    <br>   
+                    <p style="text-align: justify !important; padding-bottom: 5%">Ofrecer servicios eficientes y confiables que se ajusten a tus proyectos siendo así una organización proveedora de bienestar, donde velamos los derechos de todos nuestros colaboradores, coherente con los principios que nos rigen y comprometidos con nuestro papel dentro de la sociedad.</p>
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-6 bg-azuloscuro3" >
+                    <!-- Contenido a la izquierda -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="videocontainer fcenter">
+                        <video controls poster style="max-width:540px; height: 450px;" id='actividad_4' class="track-element">
+                            <source src="assets/vidio/GERS - 40 Años.mp4" type="video/mp4">
+                        </video>
+                        <i class="inst mb-2">Haga clic para ejecutar el video</i>
+                    </div>   
+                </div>       
+            </div>
+        </div>
+    </div>
+    <!--Fin de nuestro proposito superior-->
+
+
+ 
+    <!--Inicio nuestra mision y vision-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-3 bg-petroleo-v3 pc-movil-slide-7-1" >
+                <div class="col-lg-12 col-md-12" align="center">
+                    <img src="assets/img/img-nuestra-mision.png" alt="" style="text-align: center !important; width: 30%;" align="center">
+                    <h1 style="color: var(--white)">Nuestra<span style="color: var(--grey)"> Misión</span></h1>
+                    <br>   
+                    <p style="text-align: justify !important; width: 70%; color: #ffff"> GERS ofrece servicios y productos de calidad que permiten dar soluciones integrales acordes a las necesidades y requerimientos de sus clientes.   </p>
+                    <br>
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-3 .bg-blanco pc-movil-slide-7-2" >
+                <div class="col-lg-12 col-md-12" align="center">
+                    <img src="assets/img/img-nuestra-vision.png " alt="" style="text-align: center !important; width: 30%;" align="center">
+                    <h1 style="color: var(--blue75)">Nuestra<span style="color: var(--primary)"> Visión</span></h1>
+                    <br>   
+                    <p style="text-align: justify !important; width: 70%;" >  GERS será siempre una empresa reconocida por sus estándares de calidad, alta eficiencia, atención, la integralidad de soluciones que propone, el desarrollo del talento humano, ambiente laboral, compromiso social, académico, cultural, ambiental y sus resultados financieros.</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Fin mision y vision-->
+
+    
+    <!--Inicio como entendemos la minera-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-6 bg-petroleo-v4min col-inline" style="padding-left: 10%; padding-right: 10%;">
+                <div class="col-lg-12 col-md-12">
+                    <h1 style="color: var(--white); text-align: center;">¿Cómo entendemos
+                       <br> la<span style="color: var(--grey)"> minería</span>?</h1>
+                    <br>   
+                    <p style="color: #ffff; text-align: justify !important;"> Creemos en una operación minera con
+                        altos estándares de seguridad, ética empresarial y buen gobierno, donde el
+                        centro de toda operación es el bienestar
+                        del ser humano y la protección del medio
+                        ambiente</p>
+                    <br>
+                   
+                    <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_06" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
+                        VER VIDEO</button>
+                </div>
+            </div>
+            <!-- Columna derecha - Fondo -->
+            <div class="col-lg-6 col-inline bg-blancofondominera">
+                
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="slide_06" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" style="color: #BFEE30;">Ver video</h5>
+                <button type="button" class="btn-closeoperacion" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst mb-2">Haga clic para ejecutar el video</i>
+                <video controls poster  class="mx-auto">
+                    <source src="assets/video/arismining1.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+            </div>
+        </div>     
+
+    </div>
+    <!--Fin como entedemos la minera-->
+
+    <!--Inicio Diversidad equidad e inclusion-->
+     <div class="container dividerImgDiversidad">
+        <div class="row">
+            <div class="col-lg-12 col-md-12"  style="display: grid; place-items: center;" >
+                <img src="assets/img/seccion-diversidad.png" data-bs-toggle="modal" data-bs-target="#slide_09" style="cursor:pointe; text-align: center !important; width: 30%;" align="center">
+            </div>  
+
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="slide_09" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Ver video</h5>
+                <button type="button" class="btn-closeoperacion" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <video controls poster  class="mx-auto">
+                    <source src="assets/video/video-equipares.mp4" type="video/mp4">
+                </video>
+                <i class="inst mb-2">Haga clic para ejecutar el video</i>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Diversidad-->
+
+    <!--Inicio Valores Slide-->
+    <div class="container divided-backgroundv3">
+        <div class="row">
+            <!-- Columna top -->
+            <div class="col-lg-12 col-md-12" style="margin-top:40px">
+                <h1 style="color: var(--white); text-align: center; padding-top: 2%;">Nuestros principios
+                    <span style="color: var(--grey)"> ARIS</span></h1>
+            </div>
+        
+            <div class="col-md-12 col-lg-12" >
+                <i class="inst mb-2">Organiza en orden alfabético los valores que hacen parte de nuestra organización</i>
+                <div class="center-actividad">
+                    <ul class="actOrderElement" id="actOrderElement">
+                        <li class="ui-state-default" value="2">
+                            <img src="assets/img/actividad-valores/valor2-eficencia.png">
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="5">
+                            <img src="assets/img/actividad-valores/valor5-seguridad.png"> 
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="3">
+                            <img src="assets/img/actividad-valores/valor3-gestion.png" >
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="1">
+                            <img src="assets/img/actividad-valores/valor1-coexistencia.png">
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="6">
+                            <img src="assets/img/actividad-valores/valor6-transparencia.png">
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="4">
+                            <img src="assets/img/actividad-valores/valor4-inversion.png">
+                            <img class="ico" src="">
+                        </li>
+                      </ul>
+                </div>
+                <button class="btn btn-warning" onclick="actOrderElement()" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
+                    Verificar</button>
+            </div>
+        </div>
+    </div>
+    <!--Fin Valores Slide-->
+
+   
+    <!--Inicio Nuestras directivas-->  
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-12 bg-petroleo-v2 pc_movil_slide_10_1" >
+                <div class="col-lg-12 col-md-12" align="center">
+                    <h1 style="color: var(--white); margin-top: 3%;">Conozcamos a<span style="color: var(--grey)"> nuestras directivas</span></h1>
+                    <i class="inst mb-2">Haga clic sobre la imagen para ver el contenido detallado</i>
+                    <br>   
+                    <img src="assets/img/Organigrama-actualizado.png" alt="" class="zoom img-zomm"
+                    style="text-align: center !important; width: 50%;" align="center"
+                    data-magnify-src="assets/img/organigrama_full.png">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin nuestras directivas-->
+    
+    <!--Actividad de vesturario operativo-nueva version-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+        <div class="col-lg-5 col-md-12 top-slide-14 bg-petroleo-v4min">
+                <div class="col-lg-12 col-md-12 padding-left-1">
+                    <h1 style="color: var(--white);">Que sigas el código de
+                        <br>
+                    <span style="color: var(--grey)"> Vestuario Operativo</span></h1> 
+
+                    <ul class="listado" style="width: 80%; margin-top: 8%;">
+                        <li>
+                            El personal debe contar con su respectiva
+                            dotación</li>
+                        <li>
+                            El uso del uniforme es obligatorio
+                        </li>    
+                        <li>
+                            Todos los trabajadores antes de ingresar a la mina deben tener sus 
+                            elementos de protección personal (EPP) aptos para cada labor
+                        </li>      
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Columna derecha - Fondo -->
+            <div class="col-lg-7 col-md-12 top-slide-14 bg-petroleov5" >
+                <div class="col-md-12 col-lg-12">
+                    <i class="inst mb-2">Clic sobre el icono más para escuchar el audio</i>
+                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
+                        <div class="col-lg-3 col-md-12">
+                            <img class="icono" id="icono1" style="margin-top: 15%; cursor: pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
+                            <img  class="img-vestuario"  src="assets/img/vestuario-1.png">
+                            <audio id="audio1" src="assets\audio\slide_10.mp3" hidden></audio>
+                        </div>
+                        <div class="col-lg-3 col-md-12">
+                            <img class="icono" id="icono2" style="margin-top: 25%; cursor: pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
+                            <img  class="img-vestuario"  src="assets/img/vestuario-2.png">
+                            <audio id="audio2" src="assets\audio\Slide-13-Sabias que.mp3" hidden></audio>
+                            
+                        </div>
+                        <div class="col-lg-3 col-md-12">
+                            <img class="icono" id="icono3" style="margin-right: 25%; cursor: pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
+                            <img class="img-vestuario" src="assets/img/vestuario-3.png">
+                            <audio id="audio3" src="assets\audio\slide-13.mp3" hidden></audio>
+                            
+                        </div>
+                    </div>
+                  </div>
+        </div> 
+    </div> 
+    </div>    
+    <!--Fin actividad de vestuario operativo-nueva version-->
+
+    <!--Inicio Actividad de vesturario administrativo-nueva version-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+        <div class="col-lg-5 col-md-12 top-slide-14 bg-petroleo-v4min">
+                <div class="col-lg-12 col-md-12 padding-left-1">
+                    <h1 style="color: var(--white);">Que sigas el código de
+                        <br>
+                    <span style="color: var(--grey)"> Vestuario Administrativo</span></h1> 
+                    <p style="color: #fff; margin-top: 5%;">Te invitamos a que cuides tu presentación personal<br>
+                        en los días de trabajo y a tener presente las <br>siguientes indicaciones</p>
+
+                    <ul class="listado" style="width: 80%; margin-top: 8%;">
+                        <li>
+                            El uso de blue jean no debe tener rotos, desgastes o decorados fuertes</li>
+                        <li>
+                            Las blusas no deben tener escotes exagerados ni ser demasiado cortas
+                        </li>    
+                        <li>
+                            Tener cuidado con el largo de las faldas y vestidos, no deben ser demasiado cortas
+                        </li>      
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Columna derecha - Fondo -->
+            <div class="col-lg-7 col-md-12 top-slide-14 bg-petroleov5" >
+                <div class="col-md-12 col-lg-12">
+                    <i class="inst mb-2">Clic sobre el icono más para escuchar el audio</i>
+                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
+                        <div class="col-lg-3 col-md-12">
+                            <img class="icono" id="icono4" style="margin-top: 5%; cursor: pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
+                            <img  class="img-vestuario"  src="assets/img/vestuario-administrativo1.png">
+                            <audio id="audio4" src="assets\audio\slide-13.mp3" hidden></audio>
+                        </div>
+                        <div class="col-lg-3 col-md-12">
+                            <img class="icono" id="icono5" style="margin-top: 5%; cursor: pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
+                            <img  class="img-vestuario"  src="assets/img/vestuario-administrativo2.png">
+                            <audio id="audio5" src="assets/audio/desarrollo_preparacion.mp3" hidden></audio>
+                        </div>
+                        <div class="col-lg-3 col-md-12">
+                            <img class="icono" id="icono6" style="margin-top: 15%; cursor: pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
+                            <img class="img-vestuario" src="assets/img/vestuario-administrativo3.png">
+                            <audio id="audio6" src="assets/audio/Enf-Laboral.mp3" hidden></audio>
+                        </div>
+                    </div>
+                  </div>
+            </div> 
+    </div> 
+    </div>   
+     <!--Fin Actividad de vesturario administrativo-nueva version-->
+
+
+     <!--Inicio Seccion2-->
+     <div class="container back dividerImgSeccion2" id="dividerImgSeccion2">
+        <div class="row">
+        
+            <div class="hide-nine-back">
+                <img src="assets/img/Fondo-seccion2.jpg" alt="">
+            </div>
+            
+            <div class="col-lg-6 col-md-12 left">
+                <h1 class="dx3-v2">2</h1>
+                <hr class="hr-custom"> 
+                <h4 class="dx2-v3">Reconoce los beneficios de
+                    trabajar con nosotros</h4>
+            </div>
+        </div>
+    </div>
+    <!--Fin Seccion2-->
+
+    
+
+     <!--Inicio Beneficios-->
+    <!--Beneficio 1-->
+    <div class="container">
+        <div class="row">
+             <!-- Columna derecha - Blanco -->
+            <div class="col-lg-6 bg-slide-13">
+                <h2 data-title="beneficio1-poliza" hidden ></h2>
+                <h2 data-title="beneficio2fondo-auxilio" hidden></h2>
+                <h2 data-title="beneficio3-transporte" hidden></h2>
+            </div>
+
+              <!-- Columna derecha - Blanco -->
+           <div class="col-lg-6 bg-blanco col-inline top-slide-14">
+                <div class="bntNextPrev12r movil-pc-flechas-l" onclick="prevSlide()">  <i class="fas fa-angle-left"></i></div>
+                <div class="col-lg-6 beneficios img rulest" >
+                    <p style="color: #000; margin-top: 5%;" class="text-center">Todos nuestros colaboradores tienen estos</p>
+                    <h1 class="text-center" style="color: #0b3d5c;">BENEFICIOS</h1>
+                    <img id="img_slide13" src="assets/img/beneficios1.png" alt="Beneficio 1" >
+                    <h2 data-title="beneficios1" hidden ></h2>
+                    <h2 data-title="beneficio2-auxilio" hidden></h2>
+                    <h2 data-title="beneficio3-transporte" hidden></h2>
+
+                    <p class="inst4 mb-2"><em>Haga click,
+                        sobre las flechas, para escuchar una
+                        breve descripción de cada una de las reglas</em></p>
+                </div>
+                <div class="bntNextPrev12r movil-pc-flechas-r" onclick="nextSlide()">  <i class="fas fa-angle-right"></i></div>
+            </div>
+
+        </div>
+    </div>
+    <!--Fin Beneficios-->
+
+     <!--Inicio Seccion3-->
+     <div class="container back dividerImgSeccion3" id="dividerImgSeccion3">
+        <div class="row">
+        
+            <div class="hide-nine-back">
+                <img src="assets/img/Fondo-seccion3.jpg" alt="">
+            </div>
+            
+            <div class="col-lg-6 col-md-12 left">
+                <h1 class="dx3-v2">3</h1>
+                <hr class="hr-custom"> 
+                <h4 class="dx2-v3">Que esperamos de ti como
+                    nuevo colaborador
+                </h4>
+            </div>
+        </div>
+    </div>
+    <!--Fin Seccion3-->
+
+    <!--Inicio Actividad Riesgos mas comunes-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna top -->
+            <div class="col-lg-8 col-inline top-slide-14 bg-petroleo-v4">
+                <div class="col-lg-12 col-md-12">
+                    <h1 style="color: var(--white); text-align: center; padding-top: 10%;">Que nos ayudes a
+                        <span style="color: var(--grey)"> PREVENIR</span> el riesgo de <br>
+                        <span style="color: var(--grey)"> Lavado de activos</span></h1>
+                    
+                        <i class="inst mb-2">Organiza de 1 a 6 los RIESGOS MAS COMUNES que puede ocurrir en nuestra operación</i>
+                        <div class="center-actividad">
+                            <ul class="actOrderElement" id="actOrderElement2">
+                                <li class="ui-state-default" value="4">
+                                    <img src="assets/img/actividad-riesgos/Riesgo4.png">
+                                    <img class="ico" src="">
+                                </li>
+                                <li class="ui-state-default" value="3">
+                                    <img src="assets/img/actividad-riesgos/Riesgo3.png"> 
+                                    <img class="ico" src="">
+                                </li>
+                                <li class="ui-state-default" value="5">
+                                    <img src="assets/img/actividad-riesgos/Riesgo5.png" >
+                                    <img class="ico" src="">
+                                </li>
+                                <li class="ui-state-default" value="2">
+                                    <img src="assets/img/actividad-riesgos/Riesgo2.png">
+                                    <img class="ico" src="">
+                                </li>
+                                <li class="ui-state-default" value="6">
+                                    <img src="assets/img/actividad-riesgos/Riesgo6.png">
+                                    <img class="ico" src="">
+                                </li>
+                                <li class="ui-state-default" value="1">
+                                    <img src="assets/img/actividad-riesgos/Riesgo1.png">
+                                    <img class="ico" src="">
+                                </li>
+                              </ul>
+                             
+                        </div>
+                        <button class="btn btn-warning" onclick="actOrderElement2()" style="background-color: #BFEE30 !important; color: #0B3D5C !important; cursor: pointer;"> 
+                            Verificar</button>
+                </div>
+            </div>
+            <!--contenido lateral derecho sagrilaft-->
+            <div class="col-lg-4 col-md-12 bg-blanco">
+                <div class="col-lg-12 col-md-12">
+                    <h1 style="color: var(--primary); text-align: center; padding-top: 12%;">¿Qué es SAGRILAFT?</h1>
+                <br>
+                <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_08"
+                style="background-color: #BFEE30 !important; color: #0B3D5C !important; float: justify;"> 
+                Ver video</button>
+                </div>
+            </div>
+
+             <!-- Modal -->
+        <div class="modal fade" id="slide_08" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" style="color: #BFEE30;">Ver video</h5>
+                <button type="button" class="btn-closeoperacion" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst mb-2">Haga clic para ejecutar el video</i>
+                <video controls poster  class="mx-auto">
+                    <source src="assets/video/sagrilaft.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--Fin actividad riesgos mas comunes-->
+
+     <!--Inicio Caso 1 Sagrilaft-->
+     <div class="container preguntas_01">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-8 col-md-12 top-slide-14 bg-petroleocasos" >
+                <div class="padding-left-3">
+                    <p style="color: #d3d3d3; margin-bottom: 1%;">CASO 1: SAGRILAFT</p>
+                    <p style="color: #f8f8f8; margin-bottom: 2%;">Que nos ayudes a PREVENIR el riesgo de Lavado de activos​<p>
+                    <p class="dx2-v4" style="color: #ffff;"> Veamos este caso relacionado con <br>SAGRILAFT
+                        y ayúdale a el profesional de contratos a tomar buenas decisiones
+                    </p>
+    
+                    <div class="ctItem" id='actividad_h_01' style="display: none;">
+                        <p style="color:var(--primary);">¿Qué crees que debió haber hecho el profesional de contratos de Cuyano Mining?​</p>
+                        <div>
+                            <p onclick="Questions(this, false)">a. Haber continuado con el proceso y no reportar al Oficial de Cumplimiento, porque había
+                                mucha urgencia en construir el campamento y era la mejor empresa?</p>
+                            <p onclick="Questions(this, false)">b. Decirle a Juan que solo se le podía hacer el pago a una sola cuenta bancaria y que eligiera cual​</p>
+                            <p onclick="Questions(this, true)">c. Informarle al equipo técnico de Cuyano Mining sobre la situación, para que le informaran
+                                a Juan y así arreglar el problema y poder continuar con el proceso.​</p>
+                            <p onclick="Questions(this, true)">d. Reportar al Oficial de Cumplimiento la señal de alerta identificada, para que fuera analizada,
+                                evaluada y se tomaran las medidas de control al respecto</p> <!--Respuesta correcta-->
+                        </div>
+                        <i class="inst" id='respuesta' style="display:none;">Mensaje</i>
+                        <i class="inst_mal" id='respuesta_mal' style="display:none;">Mensaje</i>
+                        <button class="btn" id='btn-valid' onclick="valid(2)">Validar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 top-slide-14 bg-petroleocasos" >
+                <div class="videocontainer fcenter">
+                    <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
+                    <video id="preguntas_01" class="video-slide-13" controls poster="assets/img/Portada-caso1-sagrilaft.jpg" id="Video Caso Lavado de activos">
+                        <source src="assets/video/Caso-1-SAGRILAFT.mp4" type="video/mp4">
+                    </video>
+                </div>  
+            </div>
+        </div>
+    </div>
+   <!--Fin de actividad lavado de activos-->
+
+    <!--Actividad calificacion-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco2" >
+                <div class="contenido-central">
+                    <h1 style="padding-top: 18%; color: var(--primary80)">VOTACIÓN <span style="color: var(--primary);"></span></h1>
+                    <br>   
+                    <p style="text-align: justify !important; padding-bottom: 5%">De <b>1 a 5</b> selecciona cuál es el nivel de responsabilidad
+                        que como colaborador tienes para ayudar a prevenir
+                        estos riesgos de lavado de activos en nuestra operación</p>
+
+                    <div class="rating">
+                        <input type="radio" name="estrellas" id="estrella1" value="1">
+                        <label for="estrella1"></label>
+                        <input type="radio" name="estrellas" id="estrella2" value="2">
+                        <label for="estrella2"></label>
+                        <input type="radio" name="estrellas" id="estrella3" value="3">
+                        <label for="estrella3"></label>
+                        <input type="radio" name="estrellas" id="estrella4" value="4">
+                        <label for="estrella4"></label>
+                        <input type="radio" name="estrellas" id="estrella5" value="5">
+                        <label for="estrella5"></label>
+                    </div>
+                    <br>
+					<p class="resultado"></p>
+                    <i class="inst mb-2">Selecciona el sistema de votación</i>
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-6 bg-votacion" >    
+            </div>
+        </div>
+    </div>
+    <!--Fin Actividad de calificacion-->
+
+    <!--Inicio Caso 2 Actividad lavado de activos-->
+    <div class="container preguntas_01">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-8 col-md-12 top-slide-14 bg-petroleocasos" >
+                <div class="padding-left-3">
+                    <p style="color: #d3d3d3; margin-bottom: 1%;">CASO 2: PTEE</p>
+                    <p style="color: #f8f8f8; margin-bottom: 2%;">Que actúes con ÉTICA y TRANSPARENCIA</p>
+                        <p class="dx2-v4" style="color: #ffff;"> Veamos este caso relacionado con <br>LAVADO DE ACTIVOS
+                            y ayúdale a Hugo a PREVENIR este riesgo
+                        </p>
+                    
+                    <div class="ctItem" id='actividad_h_02' style="display: none;">
+                        <h4 style="color:var(--primary);">¿Qué crees que debe hacer Hugo,
+                            frente a esta propuesta de Paco?
+                        </h4>
+                        <div>
+                            <p onclick="Questions2(this, false)">a. La propuesta de Paco no tiene nada de malo y Hugo la debe aceptar.</p>
+                            <p onclick="Questions2(this, false)">b. La propuesta de Paco es una propuesta tentadora de la que Hugo no se debe negar.</p>
+                            <p onclick="Questions2(this, true)">c. La propuesta de Paco es un acto de corrupción y debe ser rechazada por Hugo.</p>
+                            <p onclick="Questions2(this, true)">d. Hugo debe denunciar la propuesta de Paco, ante la Línea de Denuncia y Ética de Cuyano Mining</p>
+                        </div>
+                        <i class="inst" id='respuesta2' style="display:none;">Mensaje</i>
+                        <i class="inst_mal" id='respuesta_mal2' style="display:none;">Mensaje</i>
+                        <button class="btn" id='btn-valid2' onclick="valid2(2)">Validar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 top-slide-14 bg-petroleocasos" >
+                <div class="videocontainer fcenter">
+                    <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
+                    <video id="preguntas_02" class="video-slide-13" controls poster="assets/img/portada-caso-2-lavado.jpg" id="Video Caso Lavado de activos">
+                        <source src="assets/video/Caso2-lavado-activo.mp4" type="video/mp4">
+                    </video>
+                </div>  
+            </div>
+        </div>
+    </div>
+   <!--Fin de actividad lavado de activos-->
+
+   <!--Actividad estar atento a tus debers y entorno-->
+   <div class="container bg-petroleo2">
+    <div class="row ">
+        <!-- Columna izquierda - Azul petróleo -->
+        <div class="col-lg-12 col-md-12 magin-movil top-slide-14" style="text-align:center;">
+            <h1 style="color: var(--white);">Que estés ATENTO a tus deberes y a tu entorno</h1>
+            <p class="inst5 mb-2" style="margin-bottom: 5%;"><em>Revisa detenidamente las tres opciones y elige entre verdadero o falso según su aplicabilidad en cada situación</em></p>
+        </div>
+        
+        <!-- Columna derecha - Blanco -->
+        <div class="col-lg-12 col-md-12 ">
+            <div class="contenido-central">
+                <div class="col-lg-12 col-md-12 slide-2-elementos" >
+                    <div class="col-lg-3 col-md-12 actividad_slide_14">
+                        <img class="img-estructura"  src="assets/img/act_slide_14_01_pre.png">
+                        <h4>
+                            Puedes hacer una FIESTA en la operación
+                        </h4>
+                        <select class="select-opcion">
+                            <option data-image="act_slide_14_01_pre.png">Seleccione</option>
+                            <option data-image="act_slide_14_01_ok.png">Falso</option>
+                            <option data-image="act_slide_14_01_mal.png">Verdadero</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-12 actividad_slide_14">
+                        <img class="img-estructura"  src="assets/img/act_slide_14_02_pre.png">
+                        <h4>
+                            Puedes tener tu mascota en la operación
+                        </h4>
+                        <select class="select-opcion">
+                            <option data-image="act_slide_14_02_pre.png">Seleccione</option>
+                            <option data-image="act_slide_14_02_ok.png">Falso</option>
+                            <option data-image="act_slide_14_02_mal.png">Verdadero</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-3 col-md-12 actividad_slide_14">
+                        <img class="img-estructura" src="assets/img/act_slide_14_03_pre.png">
+                        <h4>
+                            Debes informar anomalías o riesgos
+                        </h4>
+                        <select class="select-opcion">
+                            <option data-image="act_slide_14_03_pre.png">Seleccione</option>
+                            <option data-image="act_slide_14_03_mal.png">Falso</option>
+                            <option data-image="act_slide_14_03_ok.png">Verdadero</option>
+                        </select>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Fin actividad de estar atento a tus deberes y tu entorno-->
+
+    <!--Inicio Caso 3 Conflicto de interes-->
+       <div class="container preguntas_02">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-8 col-md-12 top-slide-14 bg-petroleocasos" >
+                <div class="padding-left-2">
+                    <p style="color: #d3d3d3; margin-bottom: 1%;">CASO 3: CONFLICTO DE INTERÉS </p>
+                    <p style="color:#f8f8f8; margin-bottom: 2%;">Que declares situaciones de CONFLICTO DE INTERÉS</p>
+                    <p class="dx2-v4" style="color: #ffff;"> Veamos este caso relacionado con <br>CONFLICTO DE INTERÉS
+                        y ayúdale a Eloisa a tomar la mejor decisión
+                    </p>
+
+                    <div class="ctItem" id='actividad_h_03' style="display: none;">
+                        <h4 style="color:var(--primary);">Selecciona las acciones y consecuencias que consideras que ocurrirán, luego de que Eloisa
+                            ha conversado con su jefe, acerca de su situación de CONFLICTO DE INTERES
+                        </h4>
+                        <div>
+                            <p onclick="Questions3(this, false)">a. No pasará nada, ya que el sólo hecho de contárselo a su jefe ya es suficiente.</p>
+                            <p onclick="Questions3(this, true)">b. No tendrá consecuencias negatIvas para Eloisa, quien además es bien vista por su jefe
+                                y colegas al ayudar a la ética y transparencia en la organizacion.</p>
+                            <p onclick="Questions3(this, true)">c. El jefe de Eloisa se lo comunicará al Oficial de cumplimiento de la empresa, quien realizará la debida diligencia.</p>
+                            <p onclick="Questions3(this, true)">d. El oficial de cumplimiento, hará que Eloisa diligencie y firme el formato de Conflicto de interés de la empresa.</p>
+                            <p onclick="Questions3(this, false)">e. Tendrá consecuencias negativas para Eloisa, quien no podrá volver a hablar con su hermano.</p>
+                        </div>
+                        <i class="inst" id='respuesta3' style="display:none;">Mensaje</i>
+                        <i class="inst_mal" id='respuesta_mal3' style="display:none;">Mensaje</i>
+                        <button class="btn" id='btn-valid3' onclick="valid3(3)">Validar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 top-slide-14 bg-petroleocasos" >
+                <div class="videocontainer fcenter">
+                    <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
+                    <video id="preguntas_03" class="video-slide-13" controls poster="assets/img/portada-caso3-conflicto.jpg" id="ceo">
+                        <source src="assets/video/Caso 3-Conflicto-de-Interes.mp4" type="video/mp4">
+                    </video>
+                </div>  
+            </div>
+        </div>
+    </div>
+   <!--Fin caso 3 Conflicto de interes-->
+
+   
+    <!--Inicio Caso 4 Comite de Convivencia-->
+    <div class="container preguntas_02">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-8 col-md-12 top-slide-14 bg-petroleocasos-v2" >
+                <div class="padding-left-2">
+                    <p style="color: #d3d3d3; margin-bottom: 1%;">CASO 4: COMITÉ DE CONVIVENCIA </p>
+                    <p style="color:#f8f8f8; margin-bottom: 2%;">Que sepas cuándo acudir al COMITÉ DE CONVIVENCIA</p>
+                    <p class="dx2-v4" style="color: #ffff;"> Veamos este caso relacionado que puede ocurrir en <br>
+                        nuestra operación y escoge las opciones correctas
+                    </p>
+
+                    <div class="ctItem" id='actividad_h_04' style="display: none;">
+                        <h4 style="color:var(--primary);">Seleccione las acciones y consecuencias que consideras que ocurrirán,
+                            luego de que Matías ha presentado su queja en Recursos Humanos de la mineraS
+                        </h4>
+                        <div>
+                            <p onclick="Questions4(this, false)">a. El área de recursos humanos no prestará atención a Matías y le dirán que regrese al trabajo</p>
+                            <p onclick="Questions4(this, true)">b. El área de recursos humanos indicará que debe presentar esta solicitud al
+                                COMITÉ DE CONVIVENCIA de la empresa</p> <!--respuesta correcta-->
+                            <p onclick="Questions4(this, true)">c. El Comité de convivencia revisará la queja de Matías y realizaráindagación con el jefe Joaquín y compañeros de Matías</p> <!--respuesta correcta-->
+                            <p onclick="Questions4(this, true)">d. Es probable que el Comité de convivencia encuentre que el caso que presenta Matías no se trate de ACOSO LABORAL
+                                ya que es una solicitud legítima por la alta temporada de trabajo</p> <!--respuesta correcta-->
+                            <p onclick="Questions4(this, false)">e. El área de recursos humanos sancionará al jefe Joaquín,
+                                sin hacer la debida investigación ni consultar con el Comité de convivencia</p>
+                        </div>
+                        <i class="inst" id='respuesta4' style="display:none;">Mensaje</i>
+                        <i class="inst_mal" id='respuesta_mal4' style="display:none;">Mensaje</i>
+                        <button class="btn" id='btn-valid4' onclick="valid4(3)">Validar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 top-slide-14 bg-petroleocasos-v2" >
+                <div class="videocontainer fcenter">
+                    <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
+                    <video id="preguntas_04" class="video-slide-13" controls poster="assets/img/portada-caso4-comite.jpg" id="caso 4">
+                        <source src="assets/video/Caso 4-Comite -de-Convivencia.mp4" type="video/mp4">
+                    </video>
+                </div>  
+            </div>
+        </div>
+    </div>
+   <!--Fin caso 4 Conflicto de interes-->
+
+   
+
+
+<!-- sliderfinal NO REMOVER -->   
+<div class="container">
+    <h1></h1>
+</div>
+<!--end contentmodule -->
+</div>
+<!-- end  content slider -->
+    <div class="footer">
+        <div class="contCircleBar">
+            <!-- create list circle function 'createProgCircle' -->
+        </div>
+    </div>
+    <div>
+        <!-- button next & prev -->
+        <button id="pagIndex" class="bntNextPrev" onclick="btnPrev()" style="left: 10px;">
+        <i class="fas fa-angle-left"></i>
+        </button>
+        <!-- button next & prev -->
+        <button id="prev" class="bntNextPrev" style="display: none;">
+            <i class="fas fa-angle-left"></i>
+        </button>
+        <!-- button next & prev -->
+        <button id="next" class="bntNextPrev">
+            <i class="fas fa-angle-right"></i>
+        </button>
+    </div>
+</div>
+<!-- end content fluid -->   
+
+
+
+</div>
+      <!-- library javascript -->
+        <script src="assets/js/trackingmanagern3.js"></script>
+        <script src="assets/js/sessvars.js"> </script>
+        <script src="assets/js/touch-dnd.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script type="text/javascript" src="assets/js/magnify/js/jquery.magnify.js"></script>
+        <script src="assets/js/interactividad.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+       
+       <script>
+
+          aniSl19(1);
+            function aniSl19(e){
+                
+                // number of slider
+                var sliders = $(".contentModule > div").length;
+                $('#nSlider').html(sliders - 1);
+                // var progressBar = Math.round((e/sliders)*100);
+                // $(".progBar > div").css("width",progressBar+"%");
+                if(e === 1){
+                    $("#prev").css('display','none');
+                    $("#pagIndex").css('display','inline-block');
+                }else{
+                    $("#pagIndex").css('display','none');
+                }
+                if(e === 2){
+                    $("#pagIndex").css('display','none');
+                    $("#next-btn").on('click', function() {
+                        $("#next").click(); 
+                    });
+    
+                }
+                if(e === sliders){
+                    $("#next").css('display','none');
+                    // window.location.href = "quiz.php?course_code=<?= $course_code; ?>";
+                    window.location.href = "quiz.html";
+                }
+                // change background
+                if($('.current').hasClass('dividerImg')){
+                    $('body').addClass('darkStyleimg');
+                } else {
+                    $('body').removeClass('darkStyleimg');
+                }
+    
+                // change background
+                if($('.current').hasClass('dividerImg2')){
+                    $('body').addClass('darkStyleimg2');
+                } else {
+                    $('body').removeClass('darkStyleimg2');
+                }
+    
+                    // change background
+                if($('.current').hasClass('dividerImg21')){
+                    $('body').addClass('darkStyleimg21');
+                } else {
+                    $('body').removeClass('darkStyleimg21');
+                }
+
+                //cambiar fondo seccion1
+                if($('.back').hasClass('dividerImgSeccion1')){
+                    $('#dividerImgSeccion1').addClass('darkStyleimgseccion1');
+                } else {
+                    $('#dividerImgSeccion1').removeClass('darkStyleimgseccion1');
+                }
+
+
+                //cambiar fondo seccion2
+                if($('.back').hasClass('dividerImgSeccion2')){
+                    $('#dividerImgSeccion2').addClass('darkStyleimgseccion2');
+                } else {
+                    $('#dividerImgSeccion2').removeClass('darkStyleimgseccion2');
+                }
+
+                 //cambiar fondo seccion3
+                 if($('.back').hasClass('dividerImgSeccion3')){
+                    $('#dividerImgSeccion3').addClass('darkStyleimgseccion3');
+                } else {
+                    $('#dividerImgSeccion3').removeClass('darkStyleimgseccion3');
+                }
+
+                //cambiar fondo de Diversidad
+                if($('.current').hasClass('dividerImgDiversidad')){
+                    $('body').addClass('darkStyleimgdiversidad1');
+                } else {
+                    $('body').removeClass('darkStyleimgdiversidad1');
+                }
+
+
+                // change background
+                if($('.current').hasClass('dividerImg22')){
+                    $('body').addClass('darkStyleimg22');
+                } else {
+                    $('body').removeClass('darkStyleimg22');
+                }
+    
+                // change background
+                if($('.current').hasClass('dividerImg23')){
+                    $('body').addClass('darkStyleimg23');
+                } else {
+                    $('body').removeClass('darkStyleimg23');
+                }
+    
+                // change background
+                if($('.current').hasClass('minaview')){
+                    $('body').addClass('darkStyleimg3');
+                } else {
+                    $('body').removeClass('darkStyleimg3');
+                }
+    
+                // change background
+                if($('.current').hasClass('minatitle')){
+                    $('body').addClass('darkStyleimg4');
+                } else {
+                    $('body').removeClass('darkStyleimg4');
+                }
+    
+    
+                // chenge background
+                if($('.current').hasClass('dividerBg')){
+                    $('body').addClass('darkStyle');
+                } else {
+                    $('body').removeClass('darkStyle');
+                }
+            }
+    
+            // function redirect pag index
+            function btnPrev(){
+                // window.location.href = "index.php?course_code=<?= $course_code; ?>";
+                window.location.href = "index.html";
+            };
+    
+            // trackingManager.init({
+            // 'trackClass': '.track-element',
+            // 'progressEl': '#progreso_01'
+            // },
+            // '<?= $CI->session->userdata('employee_data')['user_id']; ?>', '<?= $unique_course_id; ?>', '<?= $module_id; ?>');
+    
+            // sessvars.fullname     = "<?= $CI->session->userdata('employee_data')['fullname'];  ?>";
+            // sessvars.id_empleado  = "<?= $CI->session->userdata('employee_data')['user_id'];  ?>";
+            
+            // document.addEventListener('visibilitychange', handleVisibilityChange, false);
+        </script>
+</body>
+</html>

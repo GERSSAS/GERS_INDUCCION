@@ -45,9 +45,6 @@ function updateItems(delta){
 	$('iframe').attr('src', function (i, val) { return val; });
 	// scroll position top ------->
 	$('html, body').animate({scrollTop:0}, 'slow');
-	// function animation slide ------->
-	var cont = newIndex+1;
-	aniSl19(cont);
 	// stop audio video
 	$('audio, video')[0].pause();
 	//change logo dark
@@ -58,23 +55,6 @@ function updateItems(delta){
 	}
 }
 
-// function progress circle ------->
-function progCircle(e){
-	$(".current").addClass("hide");
-  setTimeout(function(){
-    resetMenu();
-		var sliderAct = '.contentModule > div:nth-child('+ e +')';
-		var progressCircle = '.contCircleBar span:nth-child('+ e +')';
-		$(sliderAct).addClass('current');
-		$(progressCircle).addClass('current');
-		$("#textProg").html(e);
-		//reset activity h5p ------->
-	    $('iframe').attr('src', function (i, val) { return val; });
-		//function animation latest slide------->
-		aniSl19(e);
-		$(".current").removeClass("hide");
-	}, 300);
-}
 
 // function button home ------->
 function resetMenu(){

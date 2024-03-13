@@ -27,29 +27,37 @@
     color: var(--blue25);
 }
 
+/*
+    body {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        margin: 0;
+        position: relative;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    @media(max-width: 991px){
+        body {
+            height: auto;
+        }
+    }
+*/
+
+
+
+
+
+
+
+
+
 
 .bg-info {
     background-color: #0082ab !important;
 }
 
-       body {
-            width: 100%;
-            height: 100vh;
-            background-image: url(../img/fondo01.png);
-            background-position-x: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            border: none;
-            margin: 0;
-            position: relative;
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-        }
-        @media(max-width: 991px){
-            body {
-                height: auto;
-            }
-        }
+       
 
       
         .bg-petroleo {
@@ -80,7 +88,14 @@
             align-items: center;
             position: relative;
         }
-
+        .bg-petroleocasos-v3{
+            background-color: #0B3E5D;
+            height: 110vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
         .bg-petroleo-v5{
             background-color: #2c3e50; /* Color azul petróleo */
             height: 110vh;
@@ -160,6 +175,272 @@
             position: relative;
         }
 
+        .bg-blanco-bienvenida .h1{
+            color: var(--primary);  
+            padding-top: 18%;
+        }
+
+
+        /*historia*/
+        .bg-historia {
+            background-color: #133450; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /*informacion*/
+        .bg-informacion {
+            /*background-image: url(../img/beneficio1-poliza.jpg) ;*/
+            background-color: #133450; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 45%;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        /*fondo triagulos lateral derecha  mpa*/
+        .bg-mapa {
+            background-color: #133450; /* Color azul petróleo */
+            /*background-image: url(../img/triangulo-degradado-derecha.jpg);*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /*procesos del sistema de gestion*/
+        .bg-procesogestion {
+            background-image: url(../imagenes/40\ años.jpg) ;
+            background-color: #133450; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+         /*fondo azul mision*/
+         .bg-petroleo-mision {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/fondo-mision.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 50%;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /*fondo blanco vision*/
+        .bg-petroleo-vision {
+            background-color: #fff; /* Color azul petróleo */
+            background-image: url(../img/fondo-vision.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+            width: 50%;
+
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        /*Fondo propuesta de valor*/
+        .bg-propuesta {
+            background-image: url(../imagenes/40\ años.jpg) ;
+            background-color: #133450; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        /*Estrucutura pilares*/
+        .img-equipares{
+            max-height: 7rem;
+            max-width: 100%; 
+            margin: 10px auto;
+            width: auto;
+            height: auto;
+            margin-top: -6rem;
+        }
+
+        /*Estrucutura pilares*/
+        .equipares p{
+            font-size: 17px;
+            text-align: center;
+            line-height: 1.2em;
+        }
+
+        /*Estrategia corporativa*/
+        .padding-left-estrategia{
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+        /*Marco legal y normativo*/
+        .padding-left-marco{
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+        /*listado Marco legal y normativo nodefinido*/
+        .marco ul, li {
+            font-size: 1.2rem;
+            font-family: 'Futura Bk BT', sans-serif;
+            color: rgb(121, 201, 238);
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.6rem;
+            text-align: justify;
+        }
+        /*fondo triagulos lateral derecha  certificacionCR*/
+        .bg-petroleo-triangulor {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado-derecha.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-left: -13%;
+            width: 46.3%;
+        }
+        /*fondo triagulos lateral derecha  certificacionCR2*/
+        .bg-certificacion2 {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado-derecha.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-left: -7%;
+            width: 40.3%;
+        }
+
+        /*politica de segurida vial*/
+        .bg-vial {
+            background-color: #133450; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 50%;
+        }
+        /*Reglamento de higiene y seguridad industrial*/
+        .bg-reglamento {
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 45%;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        /*no definida
+        .bg-comite {
+            background-color: #133450;
+            background-image: url(../img/triangulo-degradado-derecha.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-left: -13%;
+            width: 46.3%;
+        }*/
+        /*fondo triagulos lateral derecha  plan de emergencia*/
+        .bg-planem {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado-derecha.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        /*brigada*/
+        .bg-brigada {
+            background-color: #133450;
+            background-image: url(../img/triangulo-degradado-derecha.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-left: -7%;
+            width: 48.6%;
+        }
+
+        /*Aspectos e impactos ambientales no definido
+        .img-ambientales{
+            width: 175%;
+            margin-top: -9rem;
+            margin-left: -36%;
+        }
+        */
+        
+
+        /*fondo casos*/
+        .bg-casos {
+            background-image: url(../img/fondo-casos-2024.jpg);
+            position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-size: cover;
+    		background-position: center;
+        }
+
+
+        /*fondo sagrilaft lavado de activos*/
+        .bg-petroleo-v5-sagri {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/img-triangulo-fondo-v3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            height: 120vh;
+            align-items: center;
+            position: relative;
+        }
+
          /*fondo azul operacionminera*/
          .bg-petroleo-v3 {
             background-color: #133450; /* Color azul petróleo */
@@ -172,6 +453,8 @@
             align-items: center;
             position: relative;
         }
+
+        
 
 
         /*Fondo como entendemos la minera*/
@@ -186,13 +469,13 @@
             align-items: center;
             position: relative;
         }
-
-         /*Fondo beneficios 1 poliza*/
-         .bg-slide-13 {
-            background-image: url(../img/beneficio1-poliza.jpg) ;
-            background-color: #fff; /* Color blanco */
+        
+        /*Fondo como entendemos la minera*/
+        .bg-petroleo-mineria {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado.png);
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -200,12 +483,28 @@
             position: relative;
         }
 
+        
+        
+        /*fondo triangulo iziquierda degrade*/
+        .bg-petroleo-triangulo-right {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+      
         /*Fondo beneficios 2 auxilio*/
         .bg-beneficiosauxilio1 {
-            background-image: url(../img/beneficio2fondo-auxilio.jpg) ;
+            background-image: url(../img/beneficio1-poliza.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -216,10 +515,10 @@
         
         /*Fondo beneficios 3 transporte*/
         .bg-beneficiostransporte1 {
-            background-image: url(../img/beneficio3-transporte.jpg) ;
+            background-image: url(../img/beneficio2fondo-auxilio.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -239,6 +538,30 @@
             align-items: center;
             position: relative;
         }
+
+
+        /*Fondo asi te cuidamos en la operacion*/
+        .bg-cuidamosoperacion {
+            background-image: url(../img/cuidamos-operacion.png) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .fixedv1
+        {
+            display: flex;
+        }
+
+        .imgsagri img{
+            width: 65%;
+        }
+
 
 
         .bg-petroleo-slide-7{
@@ -308,13 +631,40 @@
 
         .padding-left-1{
             margin-right: 60px;
-            margin-left: 60px;
+            margin-left: 90px;
             margin-top: 50px;
             max-width: 100%;
             padding: 0%;
         }
 
+        /*Espacio de vestuario*/
+        .padding-left-v2{
+            margin-right: 90px;
+            margin-left: 80px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
+        
+
         /*casos*/
+        .padding-left-4{
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 80px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
+        .padding-left-casos{
+            margin-right: 60px;
+            margin-left: 10px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
         .padding-left-3{
             margin-right: 60px;
             margin-left: 60px;
@@ -322,6 +672,7 @@
             max-width: 100%;
             padding: 0%;
         }
+
 
 
         .padding-left-2{
@@ -333,6 +684,43 @@
         }
 
         @media(max-width: 768px){
+             /*fondo azul mision*/
+            .bg-petroleo-mision {
+                background-color: #133450; /* Color azul petróleo */
+                background-image: url(../img/fondo-mision.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100%;
+                height: 80vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            /*fondo blanco vision*/
+            .bg-petroleo-vision {
+                background-color: #fff; /* Color azul petróleo */
+                background-image: url(../img/fondo-vision.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: right;
+                width: 100%;
+                height: 80vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+
+            .padding-left-1{
+                margin-right: 0px;
+                margin-left: 0px;
+                margin-top: 0px;
+                max-width: 100%;
+                padding: 0%;
+            }
             .bg-petroleo4{
                 background-color: #003a5d; /* Color azul petróleo */
                 height: 50vh;
@@ -402,6 +790,7 @@
             position: relative;
             text-align: center;
         }
+        
         .bg-blanco {
             background-color: #fff; /* Color blanco */
             height: 100vh;
@@ -411,10 +800,73 @@
             position: relative;
         }
 
-        /*Fondo como entendemos la minera*/
-        .bg-blancofondominera {
-            background-image: url(../img/fondo-minero24.jpg) ;
+        /*fondo diversidad*/
+        .bg-blanco-equipares {
+            background-image: url(../img/fondo-equipares.png) ;
             background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+
+        
+        
+        .bg-blanco-v2 {
+            background-color: #fff; /* Color blanco */
+            width: 55%;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Ajusta según sea necesario */
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #3498db; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /*Fondo blanco*/
+        .bg-blancominera {
+            background-color: #fff; /* Color blanco */
+            z-index: 0;
+            display:block;
+            align-items: center;
+            position: relative;
+        }
+
+        
+
+           /*Fondo asi te queremos en la operacion*/
+           .bg-azuloperacion {
+            background-image: url(../img/asi-te-queremos-operacion.png) ;
+            background-color: #133450; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /*Fondo buena gente*/
+        .bg-buenagente {
+            background-image: url(../img/buena-gente.JPG) ;
+            background-color: #133450; /* Color blanco */
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -478,15 +930,17 @@
             width: 100%;
             z-index: 1;
         }
-        .footer {
-            height: 50px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            z-index: 1;
-        }
+
         .contenido-lateral {
             margin-right: 60px;
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 3%;
+            text-align: center;
+        }
+
+        /*contenido asi te queremos*/
+        .contenido-lateral-asi-queremos {
             margin-left: 60px;
             max-width: 100%;
             padding: 3%;
@@ -529,7 +983,9 @@
             width: 60% !important;
             margin-top:20px;
         }
-        
+        .slide-acordeon{
+            width: 100%;
+        }
         .slide-2-elementos{
             display: flex; 
             margin-top: 150px; 
@@ -538,6 +994,25 @@
             z-index: 3;
         }
 
+
+        .slide-acordeon-elementos{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .slide-acordeon{
+            display: flex;
+            justify-content: center;
+        }
+        .img-ambiental-2 {
+            width: 210px !important;
+            height: auto;
+            /* transition: width 0.3s, left 0.3s; */
+            transition: max-width 0.5s ease !important  ; 
+         
+          }
+      
+  
+          
         .divided-background {
             background: linear-gradient(to bottom, #003A5D 50%, #071835 50%);
         }
@@ -627,13 +1102,18 @@
         /*Divison de estructura tematica*/
         .divided-backgroundv3 {
             /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
-            background-image: url(../img/fondo-estructura-secciones.jpg);
-            opacity: 0.6;
-            background-size: cover;
-            background-position: center;
+            background-image: url(../imagenes/fondo-azul.png);
             background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
             height: 100vh !important;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            text-align: center;
         }
+
         
         .white-text{
             color: whitesmoke !important;
@@ -648,6 +1128,8 @@
         .center-actividad{
             display: grid;
             place-items: center;
+            margin-left: 2%;
+
         }
        
 
@@ -657,6 +1139,40 @@
             max-width: 100%;
             padding: 0%;
             text-align: center;
+        }
+
+        /*instruccion flecha*/
+        .cont-central-flecha {
+            margin-right: 60px;
+            margin-left: 80px;
+            max-width: 100%;
+            padding: 0%;
+            text-align: center;
+        }
+
+        .cont-flecha-mision {
+            margin-right: 60px;
+            margin-left: 200px;
+            max-width: 100%;
+            padding: 0%;
+            text-align: center;
+        }
+
+        .cont-flecha-vision {
+            margin-right: 60px;
+            margin-left: 200px;
+            max-width: 65%;
+            padding: 0%;
+            text-align: center;
+        }
+
+        .contenido-amplio {
+            padding: 0%;
+            text-align: center;
+            max-width: 1500px;
+            display: flex;
+            padding: 0;
+            flex-wrap: wrap;
         }
        
         
@@ -697,21 +1213,127 @@
         }
         .bg-blanco2 {
             background-color: #fff; /* Color blanco */
-            height: 85vh;
+            height: 55vh;
             z-index: 0;
             display: flex;
             align-items: center;
             position: relative;
 
         } 
+
         .bg-blanco-bienvenida{
             background-color: #fff; /* Color blanco */
+            width: 45%;
             height: 85vh;
             z-index: 0;
             display: flex;
             align-items: center;
             position: relative;
         }
+        .p-style{
+            margin:0 auto; 
+            max-width: 75%; 
+            text-align: justify; 
+            color: #ffff;
+        }
+        .p-style-2{
+            margin:0 auto; 
+            max-width: 75%; 
+            text-align: justify; 
+        }
+        .img-mision-vision{
+            margin:0 auto; 
+            width:25%; 
+        }
+        @media (max-width: 734px) {
+            .img-mision-vision{
+                margin:0 auto; 
+                width:45%; 
+            }
+            .cont-flecha-mision {
+                margin-right: 0px;
+                margin-left: 0px;
+                max-width: 100%;
+                padding: 0%;
+                text-align: center;
+            }
+            .cont-flecha-vision {
+                margin-right: 0px;
+                margin-left: 0px;
+                max-width: 100%;
+                padding: 0%;
+                text-align: center;
+            }
+            .cont-flecha-mision img {
+                display: none;
+            }
+            .cont-flecha-vision img {
+                display: none;
+            }
+            .p-style{
+                margin:0; 
+                max-width: 100%; 
+                text-align: justify; 
+                color: #ffff;
+            }
+            .p-style-2{
+                margin:0 auto; 
+                max-width: 100%; 
+                text-align: justify; 
+            }
+            .divided-backgroundv3 {
+                /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+                background-image: url(../imagenes/fondo-azul.png);
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: cover;
+                height: 200vh !important;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                text-align: center;
+            }
+            .top-movil{
+                margin-top: 110px;
+            }
+            .cont-central-flecha {
+                margin-right: auto;
+                margin-left: 0px;
+                max-width: 100%;
+                padding: 0%;
+                text-align: center;
+            }
+            .cont-central-flecha img{
+                display: none;
+            }
+            
+            .bg-blanco-bienvenida{
+                background-color: #fff; /* Color blanco */
+                width: 100%;
+                height: 65vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+        }
+        /*fondo lineamiento ambiental*/
+        .bg-blanco-ambiental{
+            background-color: #003a5d;
+            background-image: url(../img/fondo-blanco-24.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+
+
         .bg-petroleo-bienvenida{
             background-color: #2c3e50; /* Color azul petróleo */
             height: 85vh;
@@ -764,6 +1386,29 @@
             align-items: center;
             position: relative;
         }
+
+        /*fondo  beneficios*/
+        .bg-blanco-beneficio {
+            background-color: #fff; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+            position: relative;
+            margin-top: 0px !important;
+            padding-left: 10%; 
+            padding-right: 5%;
+        } 
+
+        .bg-azuloscuro3-bene {
+            background-color: #022249;
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+            position: relative;
+            margin-top: 30px !important;
+        }
+
+
 
         .bg-azuloscuro4 {
             background-color: #071835; /* Color blanco */
@@ -946,7 +1591,7 @@
             position: relative;
         }
         .pc-movil-slide-22-1{
-            width: 60% !important;
+            width: 100% !important;
         }
         .pc-movil-slide-22-2{
             width: 40% !important;
@@ -960,14 +1605,14 @@
             position: relative;
         }
         .signature-slide-22{
-            max-width: 30%; 
-            margin: 0 auto; 
-            margin-top:30px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            justify-content: center;
         }
         .contenido-slide-22{
             margin-left: 80px; 
             margin-right: 80px; 
-            margin-top: 70px;
         }
 
         .divided-background-slide-14 {
@@ -1018,13 +1663,24 @@
             overflow-wrap: break-word;
             white-space: normal;
             color: var(--primary30); 
-            padding-left: 15%; 
+            padding-left: 0%; 
             margin-top:2%;
         }
 
+         /*texto subtitulos casos*/
+         .dx2-v4-casos{
+            font-size: 1.6rem;
+            font-family: 'Futura Bk BT', sans-serif;
+            color: #fff;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.7rem;
+        }
+
+
         /*texto casos*/
         .dx2-v4{
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             font-family: 'Futura Bk BT', sans-serif;
             color: #fff;
             font-weight: 500;
@@ -1058,7 +1714,19 @@
         .rating input:checked + label {
             background-image: url('../../assets/img/estrella-llena.png'); /* Cambia 'estrella-llena.png' por tu imagen de estrella llena */
         }
-        @media (max-width: 768px) {
+        @media (max-width: 734px) {
+             /*fondo  beneficios*/
+            .bg-blanco-beneficio {
+                background-color: #fff; /* Color blanco */
+                height: 80vh;
+                z-index: 0;
+                align-items: center;
+                position: relative;
+                margin-top: 30px !important;
+                padding-left: 0%; 
+                padding-right: 0%;
+                padding: 1%;
+            } 
             .bg-blancofondominera {
                 background-image: url(../img/fondo-minero24.jpg) ;
                 background-color: #fff; /* Color blanco */
@@ -1531,13 +2199,7 @@
                 padding: 3%;
                 text-align: center;
             } */
-            .footer {
-                height: 0px;
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                z-index: 1;
-            }
+
 
 
         }
@@ -1644,6 +2306,21 @@
     margin-top: -10rem;
 }
 
+
+
+
+
+
+/*imagen beneficios*/
+.img-beneficio2{
+    max-height: 16rem;
+    max-width: auto; 
+    margin: 0 auto;
+    width: 20em;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
 .img-estructura2{
     max-height: 15rem;
     max-width: 100%; 
@@ -1656,6 +2333,18 @@
 
 /*Arrastrar imagen de vestuario*/
 .img-vestuario{
+    max-height: 30rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    margin-top: -7rem;
+    z-index: -1;
+}
+
+
+/*ambiental*/
+.img-ambiental{
     max-height: 27rem;
     max-width: 100%; 
     margin: 0 auto;
@@ -1665,10 +2354,34 @@
     z-index: -1;
 }
 
+/*imagen flecha izquierda*/
+.icoflecha img {
+    width: 5%;
+    float: left;
+    margin-right: 2%;
+  }
+
+  /*imagen flecha derecha*/
+.icoflechaderecha img {
+    width: 5%;
+    float: right;
+    margin-right: 2%;
+  }
+
+.instruccionflecha i{
+    padding: 5px  10px;
+    border-radius: 5px;
+    color: #f4a630;
+    display: block;
+    text-align: left;
+    margin-top: 8px;
+}  
+
+
 /*icono mas vestuario*/
 .icono {
     position: absolute;
-    max-height: 27rem;
+    max-height: 1.4rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
@@ -1676,11 +2389,19 @@
     z-index: 1;
 }
 
+/* Lineamitnos ambientales */
+.seccionElement {
+    max-width: 1500px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+}
 
 /*Imagen beneficios*/
 .beneficios img{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: 0%;
 }
 
 
@@ -1758,6 +2479,16 @@ p, a, ul, li, label {
     line-height: 1.5rem;
 }
 
+/*listado asi te queremos en la operacion*/
+.listadoperacion li {
+	font-size: 1.2rem;
+	font-family: 'Futura Bk BT', sans-serif;
+	color: #8f8f8f ;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.6rem;
+    text-align: justify;
+}
 
 /*listado vestuario*/
  .listado ul, li {
@@ -1770,13 +2501,49 @@ p, a, ul, li, label {
     text-align: justify;
 }
 
-
 a {
     text-decoration: none;
 }
-h1, h2, h3, b, i, button, span {
+h1, h2, h3, b, button, span {
 	font-family: 'Alata', sans-serif;
     white-space: nowrap;
+}
+
+i{
+    font-family: 'Alata', sans-serif;
+    white-space: nowrap; 
+}
+
+.size-audio{
+    max-width: 75%;
+}
+
+
+
+@media (max-width: 734px) {
+    .icoflechaderecha img {
+        width: 5%;
+        float: center;
+        margin-right: 2%;
+      }
+    
+    .instruccionflecha i{
+        padding: 5px  10px;
+        border-radius: 5px;
+        color: #f4a630;
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+    }  
+    
+    i{
+        font-family: 'Alata', sans-serif;
+        white-space: normal; 
+    }
+    .size-audio{
+        max-width: 100%;
+    }
+    
 }
 
 .rulest h4 {
@@ -1898,13 +2665,14 @@ video::-webkit-media-controls-panel {
 }
 
 .dx3-v2{
-    font-size: 5em;
+    font-size: 3em;
     text-align: left;
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
-    color: #0B3D5C; 
-    padding-left: 15%; 
+    color: #0B3D5C;
+    line-height: 45px;
+    padding-left: 0%; 
     margin-top:10%;
 }
 
@@ -1924,6 +2692,18 @@ video::-webkit-media-controls-panel {
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
+    color: var(--primary);  
+    padding-top: 18%;
+}
+
+.dx2-v5{
+    font-size: 2em;
+    text-align: left;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    color: var(--primary);  
+    padding-top: 18%;
 }
 
 
@@ -1935,6 +2715,20 @@ video::-webkit-media-controls-panel {
     white-space: normal;
 
 }
+
+.dx2gente {
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #0b3d5c;
+    text-align: center;
+    line-height: 1.1em;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin: 0;
+}
+
+
 
 .dx4{
     font-size: 4em;
@@ -1986,6 +2780,23 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+/*centrar imagen*/
+.containerimg {
+    height: 395px;
+    position: relative;
+    width: 100%;
+  }
+
+.centerimg {
+    margin: 0;
+    position: absolute;
+    max-width: 100%;
+    margin-left: 20%;
+  }
+
+  
+
 video {
     position: relative;
     width: 100%;
@@ -2042,17 +2853,25 @@ h5, h4 {
 }
 
 img {
-    width: 100%;
+    width: 83%;
 }
 audio {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
 }
 .audio-bienvenida {
     width: 100%;
     max-width: 100%;
 
 }
+
+/*nuevo audio*/
+.audio-v2 {
+    width: 100%;
+    max-width: 100%;
+
+}
+
 audio:focus {
     outline: inherit !important;
     border: 3px solid #b29100;
@@ -2124,7 +2943,41 @@ button.btn {
     color: #fff !important;
     box-shadow: rgb(0 160 175 / 30%) 0px 8px 24px;
 }
-@media (max-width: 700px) {
+.h1-titulo{
+    padding-top: 15%; 
+    color: var(--primary80)
+}
+@media (max-width: 734px) {
+    .h1-titulo{
+        padding-top: 25%; 
+        color: var(--primary80)
+    }
+    .img-estructura2{
+        max-height: 15rem;
+        max-width: 100%; 
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+        margin-top: -7rem;
+    }
+    .dx2-v2{
+        font-size: 2em;
+        text-align: center;
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+        white-space: normal;
+        color: var(--primary);  
+        padding-top: 40%;
+    }
+    .dx2-v5{
+        font-size: 2em;
+        text-align: center;
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+
+        color: var(--primary);  
+        padding-top: 0%;
+    }
     .dx3-v2{
         font-size: 3em;
         text-align: left;
@@ -2186,7 +3039,7 @@ button.btn-sm {
     margin: 0 auto;
     position: relative;
     display: grid;
-    grid-template-columns: 210px 1fr 55px 80px 55px;
+    grid-template-columns: 210px 1fr 55px 100px 55px;
     align-items: center;
     text-align: center;
     padding: 0 10px;
@@ -2222,7 +3075,7 @@ button.btn-sm {
     background: #e0fcff;
 }
 .contentHeader i {
-    color: white;
+    color: var(--grey);
     font-size: 1.7rem;
     padding: 10px;
     top: 11px;
@@ -2626,12 +3479,13 @@ iframe:after {
 
 
 .accordion-button {
+    font-size: 18px;
     color: #ffffff;
-    background-color: var(--primary);
+    background-color: var(--blue75);
 }
 .accordion-button:not(.collapsed) {
     color: #fff;
-    background: var(--secondary);
+    background: var(--blue25);
 }
 .accordion-collapse.collapse.show {
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
@@ -2729,8 +3583,9 @@ iframe:after {
     background-size: cover;  
 }
 
+/*Fondo seccion1*/
 .darkStyleimgseccion1 {
-    background: url(../../assets/img/Fondo-seccion1.jpg);
+    background: url(../../assets/img/Fondo-seccion1-v2.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;  
@@ -2755,7 +3610,7 @@ iframe:after {
 
 
 .darkStyleimgdiversidad1 {
-    background: url(../../assets/img/Fondo-diversidad.jpg);
+    background: url(../../assets/img/fondo-diversidad-v2.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;  
@@ -2795,6 +3650,10 @@ iframe:after {
     background-size: cover;  
 }
 
+.top-slide-21{
+    margin-top:60px;
+}
+
 @media (max-width:734px) {
     
     .darkStyleimg21 {
@@ -2810,11 +3669,11 @@ iframe:after {
     }
 
     .darkStyleimgseccion1 {
-        background: url();
-        background-repeat: 0;
-        background-size: 0;
-        background-position: 0;
-        height: 0;
+        background: url(../../assets/img/Fondo-seccion1-v2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        height: 40vh;
         
     }
     .darkStyleimg22 {
@@ -2849,22 +3708,26 @@ iframe:after {
     .top{
        margin-top:340px;
     }
+    .top-slide-21{
+        margin-top:100px;
+    }
+    
 
     .top-slide-14{
         margin-top:100px;
-     }
-}
-.top-slide-1-2{
-    padding-left: 5%; 
-    margin-top:0%; 
-    width:40%;
-}
+    }
+    
+    }
+    .top-slide-1-2{
+        margin-top:5%; 
+        width:40%;
+    }
 
 
  /*reponsive un minuto*/  
  @media (max-width: 768px){
     .top-slide-14{
-        margin-top:70px;
+        margin-top:0px;
      }
     .top-slide-1{
         margin-top:150px;
@@ -2980,4 +3843,61 @@ iframe:after {
 .actVorF .btn {
   margin: 10px;
 }
+
   
+/*ctActivityDragDrop*/
+.ctActivityDragDrop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.ctActivityDragDrop img {
+    max-width: 317px;
+    border-radius: 5px;
+}
+.ctActivityDragDrop img:hover {
+    filter: brightness(0.8);
+    transform: scale(1.01);
+    transition: .2s;
+    cursor: pointer;
+}
+.ctActivityDragDrop .listOpcDrag > div {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 190px;
+    margin: 10px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+}
+.ctActivityDragDrop .listOpcDrag .correct img:nth-child(1) {
+    position: absolute;
+    width: 75px;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+.ctActivityDragDrop .listOpcDrag .correct img:nth-child(2) {
+    width: 75px;
+    left: 0 !important;
+    top: 0 !important;
+}
+.ctActivityDragDrop .listOpcDrop {
+    border-right: 1px solid #cacaca;
+}
+.ctActivityDragDrop .listOpcDrop img {
+    display: inline-block;
+    margin: 10px;
+    z-index: 3;
+}
+.tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+  }
+  .tooltip {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 20px;
+    font: bold 12px;
+
+    box-shadow: 0 0 2px black;
+  }

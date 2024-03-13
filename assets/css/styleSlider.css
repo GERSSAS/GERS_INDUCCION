@@ -13,12 +13,22 @@
 .current i.inst {
 	padding: 5px  10px;
     border-radius: 5px;
-    background: #fdbf6030;
     color: #f4a630;
     display: block;
     text-align: center;
     margin-top: 8px;
 }
+
+/**/
+.current i.instvest {
+	padding: 5px  10px;
+    border-radius: 5px;
+    color: #f4a630;
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+}
+
 .current i.inst2 {
 	padding: 5px;
     border-radius: 5px;
@@ -28,7 +38,6 @@
     text-align: left;
     margin-top: 8px;
     font-size: 13px; 
-
 }
 
 /*ref de mision y vision*/
@@ -113,7 +122,7 @@
     }
 }
 .current hr {
-    width: 100%;
+    width: 30%;
     margin: 10px 0;
     border: 1px solid var(--black);
 }
@@ -268,12 +277,13 @@
 .card {
   background: var(--secondary30);
   cursor: default;
-  height: 250px;
+  height: 160px;
   transform-style: preserve-3d;
   transition: transform 0.4s ease 0s;
   width: 100%;
   -webkit-animation: giro 1s 1;
   animation: giro 1s 1;
+  margin-left: 8%;
 }
 .card .front,
 .card .back {

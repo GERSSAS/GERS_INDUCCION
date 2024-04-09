@@ -353,24 +353,12 @@ trackingManager.startTracking("actividad_1");
 trackingManager.stopTracking("actividad_1");
 });
 
-$("#actividad_2").on("click", function() {
-trackingManager.startTracking("actividad_2");
-trackingManager.stopTracking("actividad_2");
-});
-
-$("#actividad_3").on({
+$("#actividad_5").on({
 play:function(){
-trackingManager.startTracking("actividad_3");
-trackingManager.stopTracking("actividad_3");
+trackingManager.startTracking("actividad_5");
+trackingManager.stopTracking("actividad_5");
 }
-});
-
-$("#actividad_4").on({
-play:function(){
-trackingManager.startTracking("actividad_4");
-trackingManager.stopTracking("actividad_4");
-}
-});
+  });
 
 $("#actividad_5").on({
 play:function(){
@@ -393,19 +381,8 @@ trackingManager.stopTracking("actividad_7");
 }
 });
 
-$("#actividad_8").on({
-play:function(){
-trackingManager.startTracking("actividad_8");
-trackingManager.stopTracking("actividad_8");
-}
-});
+//TRACKING
 
-$("#actividad_9").on({
-play:function(){
-trackingManager.startTracking("actividad_9");
-trackingManager.stopTracking("actividad_9");
-}
-});
 
 $("#llamada-correcta").on({
 play:function(){

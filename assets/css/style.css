@@ -26,532 +26,2215 @@
 .textblue25{
     color: var(--blue25);
 }
-
-/*
-    body {
-        width: 100%;
-        height: 100vh;
-        border: none;
-        margin: 0;
-        position: relative;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-    }
+/*body*/
+body {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    margin: 0;
+    position: relative;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
     @media(max-width: 991px){
         body {
             height: auto;
         }
     }
-*/
 
+/*te damos pa bienvenida*/
 
-
-
-
-
-
-
-
-
-.bg-info {
-    background-color: #0082ab !important;
+.bg-blanco-bienvenida{
+    background-color: #fff; /* Color blanco */
+    width: 45%;
+    height: 85vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-       
+.bg-blanco-bienvenida .bienvenida{ /*no definido*/
+    text-align: justify;
+     padding-top: 5%; 
+     padding-bottom: 5%;
+     color: black;
+}
 
-      
-        .bg-petroleo {
-            background-color: #2c3e50; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            
-        }
+/*fondo color video*/
+.bg-azul-bienvenida{
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.videocontainer{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;    
+}
+
+video {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+video:focus {
+    outline: none !important;
+}
+
+/*programa de induccion y reinduccion*/
+
+.bg-induccion {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-induccion .induccion{
+    text-align: justify !important;
+    padding-bottom: 5%; 
+    color: black;
+}
+
+.bg-reinduccion {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-reinduccion .reinducción{
+    text-align: justify !important; 
+    padding-bottom: 5%; 
+    color: white;
+}
+
+/*estructra tematica*/
+
+/*Divison de estructura tematica*/
+.estructura-tematica {
+    /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+    background-image: url(../imagenes/fondo-azul.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh !important;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.img-estructura{
+    max-height: 16rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    margin-top: -10rem;
+}
+
+.img-estructura2{
+    max-height: 15rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    margin-top: -3rem;
+}
+
+/*Sección 1*/
+
+.seccion1{
+    width: 65%;
+    margin-left: 35.5%;
+    margin-top: -14%;
+    margin-bottom: -45%;
+}
+
+/*Nuestro proposito*/
+
+.bg-proposito {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
  
-        /*background casos*/
-        .bg-petroleocasos {
-            background-color: #0B3E5D;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+.proposito{
+    text-align: justify !important; 
+    padding-bottom: 5%; 
+    color: black;
+}
 
-        .bg-petroleocasos-v2 {
-            background-color: #0B3E5D;
-            height: 120vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .bg-petroleocasos-v3{
-            background-color: #0B3E5D;
-            height: 110vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .bg-petroleo-v5{
-            background-color: #2c3e50; /* Color azul petróleo */
-            height: 110vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            width: 35%;
-        }
+.bg-proposito1 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-        .bg-petroleo80-v2{
-            background-color: #17637E; /* Color azul petróleo */
-            height: 110vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            width: 65%;
-        }
+video {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+video:focus {
+    outline: none !important;
+}
 
-        /*color petroleo 80%*/
-        .bg-petroleo80 {
-            background-color: #17637E; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+/*generalidades de la empresa*/
 
-        .bg-petroleo2 {
-            background-color: #003a5d; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .bg-petroleo4{
-            background-color: #003a5d; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+/*fondo triangulo iziquierda degrade*/
+.bg-generalidades-empresa {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-        .bg-petroleov5 {
-            background-color: #133450; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+/*listado definir*/
 
+/*sedes*/
 
-          /*fondo azul petroelo-er*/
-        .bg-petroleo-v2 {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/img-triangulo-fondo-v3.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: flex;
-            height: 100vh;
-            align-items: center;
-            position: relative;
-        }
-        .bg-petroleo-v4 {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/img-triangulo-fondo-v3.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: flex;
-            height: 120vh;
-            align-items: center;
-            position: relative;
-        }
+/*Fondo blanco*/
+.bg-mapa {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
 
-        .bg-blanco-bienvenida .h1{
-            color: var(--primary);  
-            padding-top: 18%;
-        }
+/*fondo triagulos lateral derecha  mpa*/
+.bg-mapa1 {
+    background-color: #133450; /* Color azul petróleo */
+    /*background-image: url(../img/triangulo-degradado-derecha.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
+/*Historia GERS*/
 
-        /*historia*/
-        .bg-historia {
-            background-color: #133450; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+.bg-historia {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
 
-        /*informacion*/
-        .bg-informacion {
-            /*background-image: url(../img/beneficio1-poliza.jpg) ;*/
-            background-color: #133450; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 45%;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        /*fondo triagulos lateral derecha  mpa*/
-        .bg-mapa {
-            background-color: #133450; /* Color azul petróleo */
-            /*background-image: url(../img/triangulo-degradado-derecha.jpg);*/
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+}
 
-        /*procesos del sistema de gestion*/
-        .bg-procesogestion {
-            background-image: url(../imagenes/40\ años.jpg) ;
-            background-color: #133450; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-         /*fondo azul mision*/
-         .bg-petroleo-mision {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/fondo-mision.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 50%;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+.bg-historia1 {
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-        /*fondo blanco vision*/
-        .bg-petroleo-vision {
-            background-color: #fff; /* Color azul petróleo */
-            background-image: url(../img/fondo-vision.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: right;
-            width: 50%;
+.historia{
+    text-align: justify !important; 
+    padding-bottom: 5%; 
+    color: white;
+}
 
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        /*Fondo propuesta de valor*/
-        .bg-propuesta {
-            background-image: url(../imagenes/40\ años.jpg) ;
-            background-color: #133450; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        /*Estrucutura pilares*/
-        .img-equipares{
-            max-height: 7rem;
-            max-width: 100%; 
-            margin: 10px auto;
-            width: auto;
-            height: auto;
-            margin-top: -6rem;
-        }
+/*linea del tiempo*/
 
-        /*Estrucutura pilares*/
-        .equipares p{
-            font-size: 17px;
-            text-align: center;
-            line-height: 1.2em;
-        }
+.bg-linea-tiempo {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.linea{
+    margin-left: 19%;
+    width: 61%;
+}
 
-        /*Estrategia corporativa*/
-        .padding-left-estrategia{
-            margin-right: 60px;
-            margin-left: 60px;
-            margin-top: 50px;
-            max-width: 100%;
-            padding: 0%;
-        }
-        /*Marco legal y normativo*/
-        .padding-left-marco{
-            margin-right: 60px;
-            margin-left: 60px;
-            margin-top: 50px;
-            max-width: 100%;
-            padding: 0%;
-        }
-        /*listado Marco legal y normativo nodefinido*/
-        .marco ul, li {
-            font-size: 1.2rem;
-            font-family: 'Futura Bk BT', sans-serif;
-            color: rgb(121, 201, 238);
-            font-weight: 500;
-            margin: 0;
-            line-height: 1.6rem;
-            text-align: justify;
-        }
-        /*fondo triagulos lateral derecha  certificacionCR*/
-        .bg-petroleo-triangulor {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/triangulo-degradado-derecha.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-left: -13%;
-            width: 46.3%;
-        }
-        /*fondo triagulos lateral derecha  certificacionCR2*/
-        .bg-certificacion2 {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/triangulo-degradado-derecha.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-left: -7%;
-            width: 40.3%;
-        }
+/*informacion*/
+.bg-informacion {
+    /*background-image: url(../imagenes/wiki.png) ;*/
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-        /*politica de segurida vial*/
-        .bg-vial {
-            background-color: #133450; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            width: 50%;
-        }
-        /*Reglamento de higiene y seguridad industrial*/
-        .bg-reglamento {
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 45%;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        /*no definida
-        .bg-comite {
-            background-color: #133450;
-            background-image: url(../img/triangulo-degradado-derecha.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-left: -13%;
-            width: 46.3%;
-        }*/
-        /*fondo triagulos lateral derecha  plan de emergencia*/
-        .bg-planem {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/triangulo-degradado-derecha.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        /*brigada*/
-        .bg-brigada {
-            background-color: #133450;
-            background-image: url(../img/triangulo-degradado-derecha.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-left: -7%;
-            width: 48.6%;
-        }
+.bg-informacion1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-        /*Aspectos e impactos ambientales no definido
-        .img-ambientales{
-            width: 175%;
-            margin-top: -9rem;
-            margin-left: -36%;
-        }
-        */
-        
+.info1{
+    text-align: justify !important; 
+    padding-bottom: 5%; 
+    color: black; 
+    width: 84%; 
+    margin-left: 5%;
+}
 
-        /*fondo casos*/
-        .bg-casos {
-            background-image: url(../img/fondo-casos-2024.jpg);
-            position: absolute;
-			width: 100%;
-			height: 100vh;
-			background-size: cover;
-    		background-position: center;
-        }
+.info2{
+    text-align: justify !important; 
+    padding-bottom: 5%; 
+    color: black; 
+    width: 84%; 
+    margin-left: 5%;
+}
+
+/*sistema de gestion*/
+
+.bg-sistema-gestion {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.sistema{
+    text-align: justify !important; 
+    padding-bottom: 5%; 
+    margin-left: 18px; 
+    color: black; 
+    width: 97%;
+}
+
+.sistema2{
+    text-align: justify !important; 
+    padding-bottom: 5%; 
+    margin-left: 18px; 
+    color: black; 
+    width: 97%;
+}
+
+.bg-sistema-gestion1 {
+    background-image: url(../imagenes/sistema-gestion.png);
+    background-color: #022249; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Organigrama*/
+
+/*fondo orga*/
+.bg-organigrama {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
 
-        /*fondo sagrilaft lavado de activos*/
-        .bg-petroleo-v5-sagri {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/img-triangulo-fondo-v3.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: flex;
-            height: 120vh;
-            align-items: center;
-            position: relative;
-        }
+/*procesos del sistema de gestion*/
+.bg-procesogestion {
+    background-image: url(../imagenes/proceso-gestion.JPG) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-         /*fondo azul operacionminera*/
-         .bg-petroleo-v3 {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/img-triangulo-fondo-v3.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+.bg-sistemagestion {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
 
-        
+}
 
+/*mapa de procesos*/
 
-        /*Fondo como entendemos la minera*/
-         .bg-petroleo-v4min {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/triangulos-v3-minera.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        
-        /*Fondo como entendemos la minera*/
-        .bg-petroleo-mineria {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/triangulo-degradado.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+.bg-mapa-proceso {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-        
-        
-        /*fondo triangulo iziquierda degrade*/
-        .bg-petroleo-triangulo-right {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/triangulo-degradado.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+/*nuestra misión y visión*/
 
-      
-        /*Fondo beneficios 2 auxilio*/
-        .bg-beneficiosauxilio1 {
-            background-image: url(../img/beneficio1-poliza.jpg) ;
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+ /*fondo azul mision*/
+ .bg-mision {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/fondo-mision.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-        
-        /*Fondo beneficios 3 transporte*/
-        .bg-beneficiostransporte1 {
-            background-image: url(../img/beneficio2fondo-auxilio.jpg) ;
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+/*fondo blanco vision*/
+.bg-vision {
+    background-color: #fff; /* Color azul petróleo */
+    background-image: url(../img/fondo-vision.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    width: 50%;
 
-        /*Fondo votacion*/
-        .bg-votacion {
-            background-image: url(../img/fondo-votacion.jpg) ;
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
+.img-mision-vision{
+    margin:0 auto; 
+    width:38%; 
+}
 
-        /*Fondo asi te cuidamos en la operacion*/
-        .bg-cuidamosoperacion {
-            background-image: url(../img/cuidamos-operacion.png) ;
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+/*valores corporativos*/
+
+.valores-corporativos {
+    /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+    background-image: url(../imagenes/fondo-azul.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh !important;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/*propuesta de valor*/
+
+/*Fondo propuesta de valor*/
+
+.bg-blanco-propuesta {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    align-items: center;
+    position: relative;
+    margin-top: 0px !important;
+}
+
+.valor{
+    color: black; 
+    text-align: justify !important; 
+    width: 78%; 
+    margin-left: 14%;
+}
+
+.bg-propuesta {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/*pilares estrategicos*/
+
+.bg-pilares-estrategicos {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Estrucutura pilares*/
+.img-equipares{
+    max-height: 7rem;
+    max-width: 100%; 
+    margin: 10px auto;
+    width: auto;
+    height: auto;
+    margin-top: -6rem;
+}
+
+/*Estrucutura pilares*/
+.equipares p{
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+/*Estrategia corporativa*/
+
+.bg-estrategia-corporativa {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.padding-left-estrategia{
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-top: 50px;
+    max-width: 100%;
+    padding: 0%;
+}
+
+/*marco legal normativo*/
+
+/*fondo triangulo iziquierda degrade*/
+.bg-legal-normativo {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.padding-left-marco{
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-top: 50px;
+    max-width: 100%;
+    padding: 0%;
+}
+
+.marco1{
+    color: white; 
+    margin-bottom: 2%; 
+    width: 60%; 
+    margin-left: -3%;
+}
+
+.marco2{
+    color: white; 
+    margin-bottom: 2%; 
+    width: 60%; 
+    margin-left: -3%;
+}
+
+/*marco legal normativo2*/
+
+.bg-azuloscuro3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*certificacion de cumplimientos de requisitos*/
+
+/*Fondo blanco*/
+.bg-certificacion {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+.bg-certificacion1 {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -13%;
+    width: 46.3%;
+}
+
+/*fondo triagulos lateral derecha  certificacionCR2*/
+
+/*Fondo blanco*/
+.bg-certificacion2 {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+.bg-certificacion3 {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 40.3%;
+}
+
+/*fondo triagulos lateral derecha  certificacionCR3*/
+
+/*Fondo blanco*/
+.bg-certificado4 {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+.bg-certificado5 {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 40.3%;
+}
+
+/*sección 2*/
+
+.seccion2{
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 0%;
+    margin-bottom: -27%;
+}
+
+/*Políticas de gestión integral.*/
+
+.bg-politica-gestion {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Política de prevención y promoción de la salud.*/
+
+.bg-politica-promocion {
+    /*background-image: url(../img/beneficio1-poliza.jpg) ;*/
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-politica-promocion1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Política de prevención y promoción de la salud.2*/
+
+.bg-politica-promocion2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-politica-promocion3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Política de seguridad vial.*/
+
+.bg-politica-seguridad {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Seguridad vial y transporte.*/
+
+/*fondo triangulo iziquierda degrade*/
+.bg-seguridad-vial {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-seguridad-vial1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Seguridad vial*/
+
+.bg-seguridad-vial2 {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Reglamento de higiene y seguridad industrial.*/
+
+/*Reglamento de higiene y seguridad industrial.2*/
+
+/*Copasst.*/
+
+.bg-copasst {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-copasst1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*copasst2*/
+
+/*Fondo blanco*/
+.bg-copasst2 {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+.bg-copasst3 {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -13%;
+    width: 46.3%;
+}
+
+/*comite de convivencia*/
+
+/*fondo triangulo iziquierda degrade*/
+.bg-comite-convivencia {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-comite-convivencia1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*comite de convivencia2*/
+
+.bg-comite-convivencia2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-comite-convivencia3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*funciones del  comite de convivencia*/
+
+/*Fondo blanco*/
+.bg-funciones {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+.bg-funciones1 {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -13%;
+    width: 46.3%;
+}
+
+/*comite de convivencia 3*/
+
+.bg-convivencia {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -13%;
+    width: 46.3%;
+}
+
+/*Fondo blanco*/
+.bg-convivenvia1 {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+/*plan de emergencia*/
+
+/*fondo triagulos lateral derecha  plan de emergencia*/
+.bg-planem {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Fondo blanco*/
+.bg-planem1 {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+/*plan de emergencia 2*/
+
+.bg-planem2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-planem3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*factores de riesgos y sus controles*/
+
+.bg-factor-riesgo {
+    background-color: #133450;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*matriz de peligros*/
+
+.bg-matriz-peligro {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-matriz-peligro1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Aspecto e impactos ambientales*/
+
+.bg-aspecto {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-procedimientos {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+
+/*¿Que es un accidente de trabajo?*/
+
+.bg-accidente-trabajo {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-accidente-trabajo1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*¿Que hacer en caso de un accidente de trabajo?*/
+
+.bg-que-hacer {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-que-hacer1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*¿Que derechos se tiene al estar afiliado a ARL?*/
+
+.bg-afiliado-arl {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-afiliado-arl1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Deberes y derechos del empleado*/
+
+.bg-deberes {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-derechos {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+
+/*Reporte de condiciones y actos inseguros*/
+
+.bg-reporte-condiciones {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-reporte-condiciones1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Actos inseguros*/
+
+.bg-actos {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-inseguro {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+
+/*Condición insegura*/
+
+.bg-condicion {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-insegura {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+
+/*Gestión ambiental*/
+
+.bg-gestion-ambiental {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Clasificación de residuos*/
+
+.bg-clasificacion {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Fondo blanco*/
+.bg-residuos {
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+    height: 114%;
+}
+
+/*codigo de colores*/
+
+.bg-codigo-colores {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-colores {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*codigo de colores 2*/
+
+.bg-colores1 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-colores2 {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+/*Seccion 3*/
+
+.seccion3{
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 0%;
+    margin-bottom: -27%; 
+}
+
+/*direccionamiento 2024*/
+
+.divided-backgroundv3 {
+    /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+    background-image: url(../imagenes/fondo-azul.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh !important;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/*direccionamiento 1*/
+
+.divided-backgroundv3 {
+    /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+    background-image: url(../imagenes/fondo-azul.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh !important;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/*direccionamiento 2*/
+
+.divided-backgroundv3 {
+    /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+    background-image: url(../imagenes/fondo-azul.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh !important;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/*direccionamiento 3*/
+
+.divided-backgroundv3 {
+    /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+    background-image: url(../imagenes/fondo-azul.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh !important;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/*Objetivos de gestión integral*/
+
+/*fondo triangulo iziquierda degrade*/
+.bg-objetivo-gestion {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-objetivo-gestion1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*riesgos y oprtunidades*/
+
+.bg-riesgo {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-oportunidad {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*Que es un riesgo*/
+
+.bg-riesgo {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-riesgo1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*control de procesos*/
+
+.bg-control {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-procesos {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*Documentos indispensables en carpetas de proyectos*/
+
+.bg-documento-indispensables {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-carpetas-proyectos {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Procedimientos seguros para el desarrollo de la tareas*/
+
+.bg-procedimientos-seguros {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-desarrollo-tareas {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+
+/*funciones, responsabilidades y beneficios*/
+
+.bg-responsabilidades {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-beneficios {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*Perfiles de cargos y funciones*/
+
+.bg-perfiles-cargos {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Beneficios*/
+
+.bg-beneficio-text {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-beneficio-text1 {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*induccion tecnologica de la informacion*/
+
+.bg-tecnologia {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-la-informacion {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*objetivo*/
+
+.bg-objetivo {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-ojetivo1 {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*cuenta corporativa*/
+
+.bg-cuenta {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-corporativa {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*google drive*/
+
+.bg-google-drive {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Google drive & Backup*/
+
+.bg-blanco2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-brigada {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+
+/*soporte*/
+
+.bg-blanco {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-propuesta {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*servicios que ofrece gers*/
+
+.bg-servicio {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-Ogers {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*Estudios de sistemas eléctricos*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Diseño e ingeniería*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Pruebas, Automatización y Control*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Servicios energéticos*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Energías Renovables Solares y Eólicas*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Cursos & Webinar Especializados*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*registro de anticipos y relaciones de gastos.*/
+
+.bg-registro {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-relaciones {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*Registro para solicitud de anticipo*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Registro para legalización de gastos*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Registro para legalización de gastos1*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Registro para legalización de gastos2*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Registro para legalización de gastos3*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Valores a reconocer por alimentación 2023.*/
+
+.bg-blanco {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-propuesta {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*gestor de proyectos*/
+
+.bg-gestor {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-proyectos {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*Historia de nuestro gestor de proyectos*/
+
+.bg-blanco2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-brigada {
+    background-color: #133450;
+    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: -7%;
+    width: 48.6%;
+}
+
+/*normas de convivencia*/
+
+.bg-normas {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-convivencia {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*contenido*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-blanco {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*introduccion*/
+
+.bg-blanco2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-azuloscuro3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*cumplimiento de horario*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*respeto hacia los compañeros*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-blanco {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*presentacion personal*/
+
+.bg-blanco2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-azuloscuro3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*otras recomendaciones*/
+
+.bg-blanco2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-azuloscuro3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*fundacion gers*/
+
+.bg-fundacion {
+    background-image: url(../imagenes/) ;
+    background-color: #133450; /* Color blanco */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-fundaciong {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+/*acerca de nuestra fundacion*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-blanco {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*correguimiento el hormiguero*/
+
+.bg-petroleo-triangulo-right {
+    background-color: #133450; /* Color azul petróleo */
+    background-image: url(../img/triangulo-degradado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-blanco {
+    background-color: #fff; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*como colaborar*/
+
+.bg-blanco2 {
+    background-color: #fff;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.bg-azuloscuro3 {
+    background-color: #022249; /* Color blanco */
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
         .fixedv1
         {
@@ -560,56 +2243,6 @@
 
         .imgsagri img{
             width: 65%;
-        }
-
-
-
-        .bg-petroleo-slide-7{
-            background-color: #003a5d; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .bg-slide1 {
-            background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/img-minuto-reflexionv2.png);
-            background-repeat: no-repeat;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .video-background {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .video-background video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.1;
-            z-index: -1;
-        }
-        
-        .bg-petroleoemergency{
-            background-color: #003a5d; /* Color azul petróleo */
-            background-image: url(../img/emergency.png);
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            text-align: center;
         }
 
         .pc-slide-8{
@@ -628,7 +2261,7 @@
         .padding-right{
             padding-right: 10%;
         }
-
+/*tipografia!!*/
         .padding-left-1{
             margin-right: 60px;
             margin-left: 90px;
@@ -645,8 +2278,6 @@
             max-width: 100%;
             padding: 0%;
         }
-
-        
 
         /*casos*/
         .padding-left-4{
@@ -672,8 +2303,6 @@
             max-width: 100%;
             padding: 0%;
         }
-
-
 
         .padding-left-2{
             margin-right: 0px;
@@ -712,7 +2341,6 @@
                 align-items: center;
                 position: relative;
             }
-
 
             .padding-left-1{
                 margin-right: 0px;
@@ -768,160 +2396,7 @@
                 text-align: center;
             }
         }
-        .phones{
-            display: inline-grid;
-            -ms-flex-align: start;
-            align-content: flex-start;
-            justify-content: center;
-            justify-items: center;
-            margin: 0 auto;
-            padding-top: 70px;
-        }
-        .bg-petroleosound{
-            background-color: #003a5d; /* Color azul petróleo */
-            background-image: url(../img/soundprofile.png);
-            background-repeat: repeat-x;
-            background-position: bottom;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            text-align: center;
-        }
         
-        .bg-blanco {
-            background-color: #fff; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        /*fondo diversidad*/
-        .bg-blanco-equipares {
-            background-image: url(../img/fondo-equipares.png) ;
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-
-        
-        
-        .bg-blanco-v2 {
-            background-color: #fff; /* Color blanco */
-            width: 55%;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .buttons-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px; /* Ajusta según sea necesario */
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #3498db; /* Color de fondo del botón */
-            color: #fff; /* Color del texto del botón */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        /*Fondo blanco*/
-        .bg-blancominera {
-            background-color: #fff; /* Color blanco */
-            z-index: 0;
-            display:block;
-            align-items: center;
-            position: relative;
-        }
-
-        
-
-           /*Fondo asi te queremos en la operacion*/
-           .bg-azuloperacion {
-            background-image: url(../img/asi-te-queremos-operacion.png) ;
-            background-color: #133450; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        /*Fondo buena gente*/
-        .bg-buenagente {
-            background-image: url(../img/buena-gente.JPG) ;
-            background-color: #133450; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .bg-blancoincident{
-            background-color: #fff; /* Color azul petróleo */
-            background-image: url(../img/report.png);
-            background-repeat: repeat-x;
-            background-position: bottom;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            position: relative;
-            text-align: center;
-        }
-
-        .bg-azuloscuro {
-            background-color: #071835; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .bg-petroleoh {
-            background-color: #003A5D; /* Color azul petróleo */
-            height: 50vh;
-            z-index: 0;
-            align-items: center;
-            position: relative;
-        }
-        .bg-blancoh {
-            background-color: #fff; /* Color blanco */
-            height: 50vh;
-            z-index: 0;
-            align-items: center;
-            position: relative;
-        }
-
-        .bg-azuloscuroh {
-            background-color: #071835; /* Color blanco */
-            height: 50vh;
-            z-index: 0;
-            align-items: center;
-            position: relative;
-        }
-
-
         .header {
             height: 4vh;
             background: rgba(240, 240, 240, 0.5); /* Fondo semitransparente */
@@ -974,15 +2449,7 @@
             z-index: 0;
             position: relative;
         }
-        .pc-celular-blanco{
-            width: 40% !important; 
-            margin-top:20px;
-        }
-        
-        .pc-celular-azul{
-            width: 60% !important;
-            margin-top:20px;
-        }
+
         .slide-acordeon{
             width: 100%;
         }
@@ -1010,8 +2477,6 @@
             transition: max-width 0.5s ease !important  ; 
          
           }
-      
-  
           
         .divided-background {
             background: linear-gradient(to bottom, #003A5D 50%, #071835 50%);
@@ -1033,98 +2498,15 @@
             background: linear-gradient(to bottom, #003A5D 50%, #fff 50%);
         }
 
-        .actPuzzle {
-            display: grid;
-            grid-template-columns: 80.13px 1fr;
-            grid-gap: 20px;
-        }
-        .actPuzzle > div:nth-child(1) {
-            display: grid;
-        }
-        .actPuzzle > div:nth-child(1) img {
-            position: relative;
-            z-index: 3 !important;
-            margin-bottom: 5%;
-        }
-        .actPuzzle > div:nth-child(1) img:hover {
-            cursor: all-scroll;
-            filter: grayscale(50%);
-            transform: scale(2);
-        }
-        .actPuzzle > div:nth-child(1) img:active,
-        .actPuzzle > div:nth-child(1) img:focus {
-            border: 4px solid #5eff96 !important;
-            background: none;
-            color: inherit;
-        }
-        .actPuzzle > div:nth-child(2) {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            -webkit-box-shadow: 0px 5px 20px 0px rgb(20 32 39 / .3);
-               -moz-box-shadow: 0px 5px 20px 0px rgb(20 32 39 / .3);
-                    box-shadow: 0px 5px 20px 0px rgb(20 32 39 / .3);
-        }
-        .actPuzzle > div:nth-child(2) img {
-            -webkit-box-shadow: none !important;
-               -moz-box-shadow: none !important;
-                    box-shadow: none !important;
-        }
-        .actPuzzle > div:nth-child(2) > div:nth-child(1) {
-            grid-column: 1;
-            grid-row: 1/3;
-        }
-        .actPuzzle > div:nth-child(2) > div:nth-child(2) {
-            grid-column: 2;
-            grid-row: 1/3;
-        }
-        .actPuzzle > div:nth-child(2) > div:nth-child(3) {
-            grid-column: 3;
-            grid-row: 1/3;
-        }
-        .actPuzzle > div:nth-child(2) > div:hover {
-            outline: 1px solid #0f9baf;
-            z-index: 2;
-            cursor: pointer;
-        }
-        .actPuzzle > div:nth-child(2) > div.act {
-            outline: 3px solid #0f9baf;
-            z-index: 2;
-        }
-        @media (max-width: 1070px) {
-            .actPuzzle {
-                grid-template-columns: 1fr;
-            }
-            .actPuzzle > div:nth-child(1) {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-
-        /*Divison de estructura tematica*/
-        .divided-backgroundv3 {
-            /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
-            background-image: url(../imagenes/fondo-azul.png);
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-size: cover;
-            height: 100vh !important;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            text-align: center;
-        }
-
         
+
         .white-text{
             color: whitesmoke !important;
             margin-top: 60px; 
         }
 
         /*titulo valores*/
-        .text-valores{
-            color: #BFEE30 !important;
-            margin-top: 5px; 
-        }
+
         .center-actividad{
             display: grid;
             place-items: center;
@@ -1132,7 +2514,6 @@
 
         }
        
-
         .contenido-central {
             margin-right: 60px;
             margin-left: 60px;
@@ -1141,40 +2522,6 @@
             text-align: center;
         }
 
-        /*instruccion flecha*/
-        .cont-central-flecha {
-            margin-right: 60px;
-            margin-left: 80px;
-            max-width: 100%;
-            padding: 0%;
-            text-align: center;
-        }
-
-        .cont-flecha-mision {
-            margin-right: 60px;
-            margin-left: 200px;
-            max-width: 100%;
-            padding: 0%;
-            text-align: center;
-        }
-
-        .cont-flecha-vision {
-            margin-right: 60px;
-            margin-left: 200px;
-            max-width: 65%;
-            padding: 0%;
-            text-align: center;
-        }
-
-        .contenido-amplio {
-            padding: 0%;
-            text-align: center;
-            max-width: 1500px;
-            display: flex;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-       
         
         .pc{
             display: block;
@@ -1183,53 +2530,7 @@
             display: none;
         }
 
-        .pc-movil-mapa1{
-            width: 40% !important; 
-            margin-top: 30px;
-        }
-        .pc-movil-mapa1-left{
-            margin-left: 60px;
-        }
-
-        .pc-movil-mapa2{
-            width: 60% !important; 
-            background-color: rgb(233, 228, 228);
-        }
-        .pc-iframe{
-            width:800px; 
-            height:600px; 
-            margin-top: 75px;
-            display: block;
-        }
-        .movil-iframe{
-            display: none;
-        }
-
-        .col-inline-politicas {
-            display: inline-flex;
-            vertical-align: top;
-            z-index: 0;
-            position: relative;
-        }
-        .bg-blanco2 {
-            background-color: #fff; /* Color blanco */
-            height: 55vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-
-        } 
-
-        .bg-blanco-bienvenida{
-            background-color: #fff; /* Color blanco */
-            width: 45%;
-            height: 85vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+        /*mision y vision*/
         .p-style{
             margin:0 auto; 
             max-width: 75%; 
@@ -1241,10 +2542,8 @@
             max-width: 75%; 
             text-align: justify; 
         }
-        .img-mision-vision{
-            margin:0 auto; 
-            width:25%; 
-        }
+        
+
         @media (max-width: 734px) {
             .img-mision-vision{
                 margin:0 auto; 
@@ -1318,278 +2617,17 @@
                 position: relative;
             }
         }
-        /*fondo lineamiento ambiental*/
-        .bg-blanco-ambiental{
-            background-color: #003a5d;
-            background-image: url(../img/fondo-blanco-24.jpg);
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-size: cover;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            text-align: center;
-        }
 
 
-        .bg-petroleo-bienvenida{
-            background-color: #2c3e50; /* Color azul petróleo */
-            height: 85vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            width: 40%;
-        }
-        .bg-petroleo3 {
-            background-color: #003a5d; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .pc-movil-slide-7-1{
-            width: 50% !important; 
-            margin-top:40px;
-        }
-        .pc-movil-slide-7-2{
-            width: 50% !important; 
-            margin-top:40px;
-        }
-        .pc-movil-slide-10-1{
-            width: 40% !important; 
-            margin-top:40px;
-        }
         
-        .pc-movil-slide-10-2{
-            width: 60% !important;
-            margin-top:40px;
-        }
-        .bg-azuloscuro2 {
-            background-color: #071835; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        /*fondo color video*/
-        .bg-azuloscuro3 {
-            background-color: #022249; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        /*fondo  beneficios*/
-        .bg-blanco-beneficio {
-            background-color: #fff; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            align-items: center;
-            position: relative;
-            margin-top: 0px !important;
-            padding-left: 10%; 
-            padding-right: 5%;
-        } 
-
-        .bg-azuloscuro3-bene {
-            background-color: #022249;
-            height: 100vh;
-            z-index: 0;
-            align-items: center;
-            position: relative;
-            margin-top: 30px !important;
-        }
-
-
-
-        .bg-azuloscuro4 {
-            background-color: #071835; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .actividad-01-cl-01{
-            margin-top: 55px !important;
-            width: 30% !important;
-        }
-        .actividad-01-cl-02{
-            width: 70% !important; 
-            padding: 3%;
-        }
-        .bg-blanco-actividad-02 {
-            background-color: #fff; /* Color blanco */
-            height: 85vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        } 
-        .pc-movil-slide-12-1{
-            width: 55%; 
-            text-align: center;
-        }
-        .pc-movil-slide-12-2{
-            width: 45% !important;
-        }
-        .movil-pc-flechas-l{
-            margin-left: 120px;
-            margin-right:40px;
-        }
-        .movil-pc-flechas-r{
-            margin-left: 40px;
-        }
-        .bg-blanco-reglas {
-            background-color: #fff; /* Color blanco */
-            height: 85vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        } 
         
-        .bg-petroleo-reglas {
-            background-color: #2c3e50; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
         
-        .pc-celular-slide-13-1{
-            width: 40% !important; 
-            margin-top: 60px;
-        }
-        .pc-celular-slide-13-2{
-            width: 60% !important; 
-            margin-top: 60px;
-        }
-        .video-slide-13{
-            max-width:500px; 
-            height: 500px;
-        }
-        .pc-movil-slide-14-1{
-            width: 60% !important;
-        }
-        .pc-movil-slide-14-2{
-            width: 40% !important;
-        }
 
-        .pc-movil-slide-15-1{
-            width: 40% !important;
-        }
-        .pc-movil-slide-15-2{
-            width: 60% !important;
-        }
-        .white-text-slide-15{
-            color: whitesmoke !important;
-            margin-top: 0px; 
-        }
-        .bg-petroleo2-slide-15 {
-            background-color: #003a5d; /* Color azul petróleo */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .pc-movil-slide-16-1{
-            width: 40% !important; 
-            margin-top:40px;
-        }
-        .pc-movil-slide-16-2{
-            width: 60% !important;
-            margin-top:40px;
-        }
-        .bg-petroleosound-slide-16{
-            background-color: #003a5d; /* Color azul petróleo */
-            background-image: url(../img/soundprofile.png);
-            background-repeat: repeat-x;
-            background-position: bottom;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-            text-align: center;
-        }
-        .bg-azuloscuro-slide-16 {
-            background-color: #071835; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .pc-movil-slide-17-1{
-            width: 60% !important;
-        }
-        .pc-movil-slide-17-2{
-            width: 40% !important;
-        }
-
-        .pc-movil-slide-18-1{
-          width: 60% !important;
-        }
-        .pc-movil-slide-18-2{
-            width: 40% !important;
-        }
         
-        .pc-movil-slide-19-1{
-            width: 70% !important; 
-            padding: 3%; 
-            margin-top:50px;
-        }
-        .pc-movil-slide-19-2{
-            width: 30% !important;
-        }
         
-        .pc-movil-llamada{
-            display: flex; 
-            flex-direction: column; 
-            align-items: flex-start; 
-        }
-        .h1-text{
-            display: block !important;
-        }
-        .h1-text-movil{
-            display: none !important;
-        }
-        .bg-blanco-slide-19 {
-            background-color: #fff; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .pc-movil-slide-20-1{
-            width: 30% !important;
-        }
-        .pc-movil-slide-20-2{
-            width: 70% !important; 
-            padding: 3%;
-        }
-        .bg-blanco-slide-20 {
-            background-color: #fff; /* Color blanco */
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+
+        
+        
         .pc-movil-slide-22-1{
             width: 100% !important;
         }
@@ -1615,47 +2653,10 @@
             margin-right: 80px; 
         }
 
-        .divided-background-slide-14 {
-            background: #003A5D 100%;
-            height: 680px !important;
-        }
-
-        .actividad_slide_14{
-            width: 30% !important;
-        }
-        .actividad_slide_14 > h4{
-            color:white; 
-            font-size:15px;
-        }
-        select {
-            width: 70%;
-            padding: 8px;
-            margin: 1px 0;
-            display: inline-block;
-            border-radius: 9px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-        }
         
-        /* Estilo cuando el select está enfocado */
-        select:focus {
-            border-color: #333;
-        }
         
-        /* Estilo para las opciones del select */
-        select option {
-            text-align: center;
-        }
-
-        .dx3-v3{
-            font-size: 3em;
-            text-align: left;
-            word-wrap: break-word; 
-            overflow-wrap: break-word;
-            white-space: normal;
-            
-        }
-
+        
+        /*tipografia!!*/
         .dx2-v3{
             font-size: 2em;
             text-align: left;
@@ -1667,26 +2668,7 @@
             margin-top:2%;
         }
 
-         /*texto subtitulos casos*/
-         .dx2-v4-casos{
-            font-size: 1.6rem;
-            font-family: 'Futura Bk BT', sans-serif;
-            color: #fff;
-            font-weight: 500;
-            margin: 0;
-            line-height: 1.7rem;
-        }
-
-
-        /*texto casos*/
-        .dx2-v4{
-            font-size: 1.4rem;
-            font-family: 'Futura Bk BT', sans-serif;
-            color: #fff;
-            font-weight: 500;
-            margin: 0;
-            line-height: 1.7rem;
-        }
+         
 
 
         .left{
@@ -2204,60 +3186,7 @@
 
         }
 
-        .col-inline2 {
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-        }
-    
-        .col-inline2 > div {
-            margin-inline: 0; 
-        }
-    
-        .col-inline2 img {
-            max-width: 100%; 
-            height: auto; 
-            margin-bottom: 10px; 
-            cursor: pointer;
-        }
-        .img-5-pc{
-            display: block;
-        }
-        .img-5-movil{
-            display: none;
-        }
-        @media (max-width: 768px) {
-            .img-5-pc{
-                display: none;
-            }
-            .img-5-movil{
-                display: block;
-            }
-            .col-inline2 {
-                display: flex;
-                justify-content: center; 
-                align-items: center; 
-                text-align: center; 
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            .m-top{
-                margin-top: 90px;
-            }
-            .col-inline2 > div {
-                margin-inline: 0; 
-                
-            }
         
-            .col-inline2 img {
-                max-width: 100%; 
-                height: auto; 
-                margin-bottom: 10px; 
-                cursor: pointer;
-            }
-        }
-
   
 
 
@@ -2297,53 +3226,22 @@
 }
 
 
-.img-estructura{
-    max-height: 16rem;
-    max-width: 100%; 
-    margin: 0 auto;
-    width: auto;
-    height: auto;
-    margin-top: -10rem;
-}
 
 
 
 
 
 
-/*imagen beneficios*/
-.img-beneficio2{
-    max-height: 16rem;
-    max-width: auto; 
-    margin: 0 auto;
-    width: 20em;
-    height: auto;
-    margin-top: 0.5rem;
-}
-
-.img-estructura2{
-    max-height: 15rem;
-    max-width: 100%; 
-    margin: 0 auto;
-    width: auto;
-    height: auto;
-    margin-top: -3rem;
-}
 
 
-/*Arrastrar imagen de vestuario*/
-.img-vestuario{
-    max-height: 30rem;
-    max-width: 100%; 
-    margin: 0 auto;
-    width: auto;
-    height: auto;
-    margin-top: -7rem;
-    z-index: -1;
-}
 
 
-/*ambiental*/
+
+
+
+
+
+/* seguimientp ambiental*/
 .img-ambiental{
     max-height: 27rem;
     max-width: 100%; 
@@ -2354,64 +3252,10 @@
     z-index: -1;
 }
 
-/*imagen flecha izquierda*/
-.icoflecha img {
-    width: 5%;
-    float: left;
-    margin-right: 2%;
-  }
-
-  /*imagen flecha derecha*/
-.icoflechaderecha img {
-    width: 5%;
-    float: right;
-    margin-right: 2%;
-  }
-
-.instruccionflecha i{
-    padding: 5px  10px;
-    border-radius: 5px;
-    color: #f4a630;
-    display: block;
-    text-align: left;
-    margin-top: 8px;
-}  
-
-
-/*icono mas vestuario*/
-.icono {
-    position: absolute;
-    max-height: 1.4rem;
-    max-width: 100%; 
-    margin: 0 auto;
-    width: auto;
-    height: auto;
-    z-index: 1;
-}
-
-/* Lineamitnos ambientales */
-.seccionElement {
-    max-width: 1500px;
-    list-style: none;
-    display: flex;
-    padding: 0;
-    flex-wrap: wrap;
-}
-
-/*Imagen beneficios*/
-.beneficios img{
-    width: 100%;
-    margin-left: 0%;
-}
 
 
 
-.img-legal{
-    max-width: 5rem;
-    height: auto;
-    margin: 0 auto;
-}
-
+/*firma*/
 .signature{
     display: flex;
     flex-direction: row;
@@ -2419,6 +3263,7 @@
     justify-content: flex-end;
 }
 
+/*no definido*/
 #mapa {
     height: 100vh; /* Altura del div */
     width: 30%x; /* Ancho del div */
@@ -2447,29 +3292,26 @@
     height: 100%; /* Altura del iframe al 100% del contenedor */
     border: none; /* Sin bordes en el iframe */
 }
-
+/*IMPORT*/
+ /*lineas secciones*/
 .hr-custom {
     width: 50%;
     margin: 0 auto; /* Centra la línea horizontal */
 }
 
-/*linea para secciones*/
-.hr-customv1 {
-    width: 30%;
-    margin: 0 auto; /* Centra la línea horizontal */
-}
-
+/*videos*/
 .fcenter{
     margin: 0 auto !important;
 }
 
+
 /*----------*/
-/*mail style*/
+/*mail style     tipografia*/
 * {
 	padding: 0;
 	margin: 0;
 }
-
+/*tipografia¡¡*/
 p, a, ul, li, label {
 	font-size: 1.3rem;
 	font-family: 'Futura Bk BT', sans-serif;
@@ -2555,12 +3397,7 @@ h2 span {
     display: inline !important;
 }
 
-.videocontainer{
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
+
 
 /* -------------- */
 /* -------------- */
@@ -2581,79 +3418,10 @@ video::-webkit-media-controls-panel {
     background-color: transparent; 
 }
 
-.instrucciones{
-    margin: 10px auto;
-    text-align: center;
-    max-width: 320px;
-    padding-top: 1vh;
-    padding-bottom: 2vh;
-    font-size:18px;
-    border-radius: 5px;
-    background: #fdbf6030;
-    color: #f4a630;
-    margin-top: 8px;
-}
-.btn-reiniciar{
-    background: var(--primary);
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    font-size: 1.3rem;
-    color: #fff !important;
-    box-shadow: rgb(0 160 175 / 30%) 0px 8px 24px;
-}
-.instrucciones2{
-    margin: 10px auto;
-    text-align: center;
-    max-width: auto;
-    padding-top: 1vh;
-    padding-bottom: 2vh;
-    font-size:18px;
-    border-radius: 5px;
-    background: #fdbf6030;
-    color: #f4a630;
-    margin-top: 8px;
-}
 
-.dx13{
-    font-size: 1.3em;
-    text-align: center;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-   white-space: normal; 
-}
 
-.dx13w{
-    color: whitesmoke;
-    font-size: 1.3em;
-    text-align: center;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-    white-space: normal;
-    font-weight: 100 !important;
-  
-}
-.dx13g{
-    color: var(--white);
-    font-size: 1.5em;
-    text-align: center;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-    white-space: normal;
-    font-weight: 100 !important;
-  
-}
 
-.dx13g:hover{
-    color: var(--grey);
-    font-size: 1.5em;
-    text-align: center;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-    white-space: normal;
-    font-weight: 400 !important;
-  
-}
+
 
 .dx3{
     font-size: 3em;
@@ -2663,7 +3431,7 @@ video::-webkit-media-controls-panel {
     white-space: normal;
   
 }
-
+/*tipografia¡¡*/
 .dx3-v2{
     font-size: 3em;
     text-align: left;
@@ -2684,8 +3452,7 @@ video::-webkit-media-controls-panel {
     white-space: normal;
 
 }
-
-
+/*tipografia !!*/
 .dx2-v2{
     font-size: 2em;
     text-align: left;
@@ -2716,6 +3483,7 @@ video::-webkit-media-controls-panel {
 
 }
 
+/*tipografia!!!*/
 .dx2gente {
     font-size: 2.2em;
     font-weight: 600;
@@ -2730,56 +3498,14 @@ video::-webkit-media-controls-panel {
 
 
 
-.dx4{
-    font-size: 4em;
-    line-height: 0.7;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
 
-}
-.dx5{
-    font-size: 5em;
-    line-height: 0.7;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-}
-.dx6{
-    font-size: 6em;
-    line-height: 0.7;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-}
-.dx5yellow{
-    font-size: 5em;
-    text-shadow: 6px 6px 14px rgba(255, 255, 255, 0.7); /* Offset X, Offset Y, Blur Radius, Color */
-    color: #ffc107;
-}
-.dx7{
-    font-size: 7em;
-    line-height: 0.7;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-}
-.colwhite{
-background-color: var(--white);
-}
-.colprimary{
-    background-color: var(--primary);
-}
-.colprimaryextradark{
-    background-color: var(--primaryextradark);
-}
 
 img {
     width: 100%;
     display: block;
 }
 
-.img-logow {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-}
+
 
 /*centrar imagen*/
 .containerimg {
@@ -2797,23 +3523,7 @@ img {
 
   
 
-video {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    /*-webkit-box-shadow: 0px 5px 15px 0px rgb(20 32 39 / .3);
-       -moz-box-shadow: 0px 5px 15px 0px rgb(20 32 39 / .3);
-            box-shadow: 0px 5px 15px 0px rgb(20 32 39 / .3);*/
-}
-video:focus {
-    outline: none !important;
-}
-iframe {
-    width: 100%;
-    /*-webkit-box-shadow: 0px 5px 15px 0px rgb(20 32 39 / .3);
-       -moz-box-shadow: 0px 5px 15px 0px rgb(20 32 39 / .3);
-            box-shadow: 0px 5px 15px 0px rgb(20 32 39 / .3);*/
-}
+
 h1 {
     color: var(--secondary);
     line-height: 1.1;
@@ -2829,88 +3539,26 @@ h2 {
     margin-bottom: 5px;
     font-weight: 800;
 }
-h2 span {
-    display: inline-block;
-    width: 60px;
-    height: 2px;
-    border-radius: 10px;
-    margin-bottom: 4px;
-    
-}
+
 h5, h4 {
     color: var(--primary);
 }
 
-.fd {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: url(assets/img/fondo00.png);
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    opacity: .85;
-}
+
 
 img {
     width: 83%;
 }
-audio {
-    width: 100%;
-    max-width: 100%;
-}
-.audio-bienvenida {
-    width: 100%;
-    max-width: 100%;
 
-}
 
-/*nuevo audio*/
-.audio-v2 {
-    width: 100%;
-    max-width: 100%;
 
-}
-
-audio:focus {
-    outline: inherit !important;
-    border: 3px solid #b29100;
-    border-radius: 58px;
-}
 
 .row {
     margin-top: 0;
     margin-right: 0;
     margin-left: 0;
 }
-.bg02 {
-    position: fixed;
-    right: -180px;
-    z-index: -1;
-    width: 90%;
-    height: 100vh;
-    overflow: hidden;
-    border: none;
-    transform: skewX(-15deg);
-}
-.bg02 > div {
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    width: 120%;
-    height: 100vh;
-    background-image: url(../img/fondo01.jpg);
-    background-position-x: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: none;
-    transform: skewX(14deg);
-}
-@media (max-width: 991px) {
-    .bg02 {
-        display: none;
-    }
-}
+
 
 /*button*/
 button:focus {
@@ -2943,10 +3591,8 @@ button.btn {
     color: #fff !important;
     box-shadow: rgb(0 160 175 / 30%) 0px 8px 24px;
 }
-.h1-titulo{
-    padding-top: 15%; 
-    color: var(--primary80)
-}
+
+
 @media (max-width: 734px) {
     .h1-titulo{
         padding-top: 25%; 
@@ -3107,15 +3753,7 @@ button.btn-sm {
         grid-template-columns: 170px 1fr 1px 80px 55px;
     }
 }
-.fdMn {
-    display: none;
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    background: #3333338c;
-    width: 100%;
-    height: 100vh;
-}
+
 .headerOpc {
     position: fixed;
     top: 0;
@@ -3316,41 +3954,7 @@ button.btn-sm {
     border-radius: 50px;
     border: 2px solid var(--grey);
 }
-.progBar {
-    position: relative;
-    height: 15px;
-    width: 100%;
-    background: #d5e9e7;
-}
-.progBar > div {
-    position: relative;
-    height: 15px;
-    width: 10%;
-    background: var(--primary);
-    transition: 1s;
-}
-.contentFooter img {
-    position: absolute;
-    z-index: -1;
-    max-width: 600px;
-    bottom: 0;
-    margin-left: -20px;
-}
-@media (max-width: 991px) {
-    .contCircleBar {
-        padding: 0px;
-        text-align: end;
-        margin-right: 0%;
-        text-align: center;
-    }
-    .contentFooter img {
-        position: relative;
-        z-index: -1;
-        max-width: 600px;
-        bottom: 0;
-        margin-left: 0px;
-    }
-}
+
 
 
 /*-------------------*/
@@ -3397,19 +4001,7 @@ button.btn-sm {
     }
 }
 
-/*--------------*/
-/*content iframe*/
-iframe {
-	position: relative;
-}
-iframe:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+
 
 /*--------------*/
 /*modal*/
@@ -3428,54 +4020,7 @@ iframe:after {
 }
 
 
-/*--------------*/
-/*titles navigation*/
-.indPag {
-    position: absolute;
-    background: #fafafa;
-    padding: 7px;
-    font-size: 1rem;
-    color: #7889a8;
-    width: 100%;
-    left: 0px;
-    top: 0;
-    border-radius: 5px;
-}
-.indPag a {
-    color: #909090;
-}
-.indPagMb {
-    display: block;
-    height: 45px;
-}
-@media (max-width: 992px) {
-    .indPagMb {
-        height: 75px;
-    }
-}
 
-.timeline{
-    display: flex
-}
-@media (max-width: 420px) {
-                                                                                                                                                                                                    .timeline {
-        display: none;
-    }
-}
-
-/*cambiar color de texto*/
-@media (max-width: 992px) {
-    .cambiocolorh1 {
-        color:#003A5D !important;
-        height: 75px;
-    }
-
-    .cambiocolordx2-v2 {
-        color:#021933 !important;
-        height: 55px;
-    }    
-
-}
 
 
 .accordion-button {
@@ -3491,413 +4036,25 @@ iframe:after {
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }
 
-/* ------------- */
-/* img avatar */
-.avatarImg {
-    max-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 15px;
-}
-
-
-.contentlong {
-  overflow-y: auto;
-  max-height: 450px; /* Ajusta la altura máxima según tus necesidades */
-  padding: 0.25em;
-}
-@media (min-width: 1080px) {
- .contentlong {
-   width: 450px;
-  }
-}
-
-.containersplit {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.divsplit1, .divsplit2 {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-@media (min-width: 720px) {
-  .divsplit1, .divsplit2 {
-    width: 50%;
-  }
-}
-
-
-.contentlong::-webkit-scrollbar {
-  width: 6px; /* Ajusta el ancho del scroll según tus necesidades */
-}
-
-.contentlong::-webkit-scrollbar-thumb {
-  background-color: #888; /* Cambia el color de la barra del scroll */
-  border-radius: 3px; /* Ajusta el radio de las esquinas redondeadas */
-}
-
-.contentlong::-webkit-scrollbar-track {
-  background-color: #f5f5f5; /* Cambia el color de fondo de la barra del scroll */
-  border-radius: 3px; /* Ajusta el radio de las esquinas redondeadas */
-}
-
-
-.explanationtext {
- margin-top: 12px;
-}
 
 
 
 
-/* -------------- */
-/* style dark version */
-/* -------------- */
-.darkStyle h1 {
-    color: var(--white);
-}
-.darkStyle {
-    background: var(--secondary);
-}
-
-.darkStyleimg {
-    background: url(../../assets/img/dotbg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;  
-}
-
-.darkStyleimg2 {
-    background: url(../../assets/img/bluebg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;  
-}
-
-.darkStyleimg21 {
-    background: url(../../assets/img/bluebg1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;  
-}
-
-/*Fondo seccion1*/
-.darkStyleimgseccion1 {
-    background: url(../../assets/img/Fondo-seccion1-v2.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;  
-}
-
-/*seccion 2*/
-.darkStyleimgseccion2 {
-    background: url(../../assets/img/Fondo-seccion2.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;  
-}
-
-/*seccion 3*/
-.darkStyleimgseccion3 {
-    background: url(../../assets/img/Fondo-seccion3.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;  
-}
 
 
 
-.darkStyleimgdiversidad1 {
-    background: url(../../assets/img/fondo-diversidad-v2.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;  
-}
 
 
-.hide-nine-back{
-    display: none;
-    margin-top: 70px;
-}
-
-.darkStyleimg22 {
-    background: url(../../assets/img/bluebg2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;  
-}
-.darkStyleimg23 {
-    background: url(../../assets/img/bluebg3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;  
-}
 
 
-.darkStyleimg3 {
-    background: url(../../assets/img/minaview.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;  
-}
-
-.darkStyleimg4 {
-    background: url(../../assets/img/minetittle.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;  
-}
-
-.top-slide-21{
-    margin-top:60px;
-}
-
-@media (max-width:734px) {
-    
-    .darkStyleimg21 {
-        background: url(../../assets/img/fondo_02_slide_04.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        height: 40vh;
-    }
-
-    .hide-nine-back{
-        display: block;
-    }
-
-    .darkStyleimgseccion1 {
-        background: url(../../assets/img/Fondo-seccion1-v2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        height: 40vh;
-        
-    }
-    .darkStyleimg22 {
-        background: url(../../assets/img/bluebg2.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        height: 45vh;
-    }
-    .darkStyleimg23 {
-        background: url(../../assets/img/bluebg3.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        height: 45vh;
-    }
-    .darkStyleimg3 {
-        background: url(../../assets/img/minaview.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        height: 45vh;
-    }
-    .darkStyleimg4 {
-        background: url(../../assets/img/minetittle.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        height: 45vh; 
-    }
-    
-    .top{
-       margin-top:340px;
-    }
-    .top-slide-21{
-        margin-top:100px;
-    }
-    
-
-    .top-slide-14{
-        margin-top:100px;
-    }
-    
-    }
-    .top-slide-1-2{
-        margin-top:5%; 
-        width:40%;
-    }
 
 
- /*reponsive un minuto*/  
- @media (max-width: 768px){
-    .top-slide-14{
-        margin-top:0px;
-     }
-    .top-slide-1{
-        margin-top:150px;
-    }
-    
-    .top-slide-1-2{
-        padding-left: 0%; 
-        margin-top:0%; 
-        width:100%;
-    }
-}
-
-.glass {
-  padding: 5%; /* Espacio interno deseado */
-  max-width: 80%;
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco transparente */
-}
-
-.glass p {
-  color: #000; /* Color del texto, por ejemplo, negro */
-}
-@media (max-width: 768px) {
-    .glass {
-        padding: 5%; /* Espacio interno deseado */
-        max-width: 100%;
-        background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco transparente */
-        display: grid;
-        place-items: center;
-        text-align: justify;
-      }
-      .glass2 {
-        display: grid;
-        place-items: center;
-      }
-      .top-logo{
-        margin-top: 350px;
-      }
-      .top-logo2{
-        margin-top: 100px;
-      }
-      .glass p {
-        color: #000; /* Color del texto, por ejemplo, negro */
-      }
-}
-/*.darkStyle .bntNextPrev {
-    color: var(--primary);
-}*/
-.darkStyle .contentHeader i {
-    color: var(--primaryDark);
-}
-
-.darkStyle .contCircleBar span {
-    background: var(--white70);
-}
-.darkStyle .contCircleBar span.current {
-    background: var(--white);
-}
-.darkStyle .contCircleBar span.current::after {
-    border: 2px solid var(--white);
-}
-.darkStyle .txPg,
-.darkStyle #home i {
-    color: var(--white) !important;
-}
 
 
-/* -------------- */
-/* -------------- */
-/* Estilo base para la imagen */
-.animated-image {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.7s ease-in-out;
-  }
-  
-  /* Estilo cuando el mouse pasa sobre la imagen */
-  .image-container:hover .animated-image {
-    transform: scale(1.2); /* Cambiar el tamaño para dar un efecto de zoom */
-  }
 
-.actVorF {
-    position: relative;
-    background: #fafafa;
-    border: 2px solid #cbced5;
-    border-radius: 10px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-.actVorF .counta {
-    background: #003a5d;
-    color: #fff;
-    font-size: 1.5rem;
-    border-radius: 10px 10px 0 0;
-    text-align: end;
-    padding: 1%;
-}
-.actVorF .itemQ {
-    display: none;
-    padding: 30px;
-}
-.actVorF .view {
-    display: block;
-}
-.actVorF img {
-    overflow: hidden;
-    border-radius: 10px;
-    width: 40%;
-    align-items: center;
-}
-.actVorF .check {
-    display: flex;
-}
-.actVorF .btn {
-  margin: 10px;
-}
+
+
+
 
   
-/*ctActivityDragDrop*/
-.ctActivityDragDrop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.ctActivityDragDrop img {
-    max-width: 317px;
-    border-radius: 5px;
-}
-.ctActivityDragDrop img:hover {
-    filter: brightness(0.8);
-    transform: scale(1.01);
-    transition: .2s;
-    cursor: pointer;
-}
-.ctActivityDragDrop .listOpcDrag > div {
-    position: relative;
-    display: inline-block;
-    width: 150px;
-    height: 190px;
-    margin: 10px;
-    border: 1px solid #cdcdcd;
-    border-radius: 5px;
-}
-.ctActivityDragDrop .listOpcDrag .correct img:nth-child(1) {
-    position: absolute;
-    width: 75px;
-    z-index: 1;
-    bottom: 0;
-    right: 0;
-}
-.ctActivityDragDrop .listOpcDrag .correct img:nth-child(2) {
-    width: 75px;
-    left: 0 !important;
-    top: 0 !important;
-}
-.ctActivityDragDrop .listOpcDrop {
-    border-right: 1px solid #cacaca;
-}
-.ctActivityDragDrop .listOpcDrop img {
-    display: inline-block;
-    margin: 10px;
-    z-index: 3;
-}
-.tooltip, .arrow:after {
-    background: black;
-    border: 2px solid white;
-  }
-  .tooltip {
-    padding: 5px 10px;
-    color: white;
-    border-radius: 20px;
-    font: bold 12px;
 
-    box-shadow: 0 0 2px black;
-  }

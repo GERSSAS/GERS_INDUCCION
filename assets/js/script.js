@@ -49,9 +49,9 @@ function updateItems(delta){
 	$('audio, video')[0].pause();
 	//change logo dark
 	if ($('body').hasClass('darkStyle')) {
-		$('.logoTop').attr("src", 'assets/imagenes/logo_1981png.png');
+		$('.logoTop').attr("src", '../assets/imagenes/GERS-I.png');
 	} else {
-		$('.logoTop').attr("src", 'assets/imagenes/logo_1981png.png');
+		$('.logoTop').attr("src", '../assets/imagenes/GERS-I.png');
 	}
 }
 

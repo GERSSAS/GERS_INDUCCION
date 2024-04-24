@@ -615,11 +615,11 @@ let cont = 0;
 for(var i = 1; i <= $("#actOrderElement li").length; i++) {
 if($("#actOrderElement li:nth-child(" + i + ")").attr("value") == i) {
 $("#actOrderElement li:nth-child(" + i + ") img").addClass("correct");
-$("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/imagenes/chulo.png");
+$("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "../assets/imagenes/chulo.png");
 cont++
 } else {
 $("#actOrderElement li:nth-child(" + i + ") img").addClass("incorrect");
-$("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/imagenes/error.png");
+$("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "../assets/imagenes/error.png");
 }
 }
 }
@@ -630,11 +630,11 @@ let cont = 0;
 for(var i = 1; i <= $("#actOrderElement2 li").length; i++) {
 if($("#actOrderElement2 li:nth-child(" + i + ")").attr("value") == i) {
 $("#actOrderElement2 li:nth-child(" + i + ") img").addClass("correct");
-$("#actOrderElement2 li:nth-child(" + i + ") .ico").attr("src", "assets/imagenes/chulo.png");
+$("#actOrderElement2 li:nth-child(" + i + ") .ico").attr("src", "../assets/imagenes/chulo.png");
 cont++
 } else {
 $("#actOrderElement2 li:nth-child(" + i + ") img").addClass("incorrect");
-$("#actOrderElement2 li:nth-child(" + i + ") .ico").attr("src", "assets/imagenes/error.png");
+$("#actOrderElement2 li:nth-child(" + i + ") .ico").attr("src", "../assets/imagenes/error.png");
 }
 }
 }

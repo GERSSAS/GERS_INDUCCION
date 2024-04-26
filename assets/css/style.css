@@ -1275,6 +1275,18 @@ video:focus {
 
 }
 
+.act{
+    width: 28%;
+    margin-left: 12%;
+    margin-top: 11%;
+}
+
+.ins{
+    width: 29%;
+    margin-left: 47%;
+    margin-top: -31%;
+}
+
 .bg-inseguro {
     background-color: #133450;
     background-image: url(../img/triangulo-degradado-derecha.jpg);
@@ -1313,6 +1325,18 @@ video:focus {
     position: relative;
     margin-left: -7%;
     width: 48.6%;
+}
+
+.condi{
+    width: 46%;
+    margin-top: 12%;
+    margin-left: 41%;
+}
+
+.inse{
+    width: 46%;
+    margin-left: 14%;
+    margin-top: 6%;
 }
 
 /*Gestión ambiental*/

@@ -294,8 +294,8 @@ video:focus {
     position: relative;
 }
 .linea{
-    margin-left: 19%;
-    width: 61%;
+    margin-left: 16%;
+    width: 67%;
 }
 
 /*informacion*/
@@ -805,8 +805,7 @@ video:focus {
 
 /*Seguridad vial y transporte.*/
 
-/*fondo triangulo iziquierda degrade*/
-.bg-seguridad-vial {
+.bg-objetivos-metas-seguridad-v {
     background-color: #133450; /* Color azul petróleo */
     background-image: url(../img/triangulo-degradado.png);
     background-repeat: no-repeat;
@@ -818,16 +817,12 @@ video:focus {
     position: relative;
 }
 
-.bg-seguridad-vial1 {
-    background-image: url(../imagenes/seguridad-vial.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100vh;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    position: relative;
+.seguridad-v{
+    width: 38%;
+    margin-top: -47.8%;
+    margin-left: 62.9%;
 }
+
 
 /*Seguridad vial*/
 
@@ -1085,6 +1080,51 @@ video:focus {
  
 }
 
+.Pacordion1{
+    margin-left: 10%; 
+    width: 11%; 
+    margin-bottom: -2%; 
+    margin-top: 2%; 
+    color: white; 
+    font-size: 155%
+}
+
+.Pacordion2{
+    margin-left: 9%; 
+    width: 11%; 
+    margin-bottom: -2%; 
+    margin-top: 2%; 
+    color: white; 
+    font-size: 155%
+}
+
+.Pacordion3{
+    margin-left: 6%; 
+    width: 11%; 
+    margin-bottom: -2%; 
+    margin-top: 2%; 
+    color: white; 
+    font-size: 155%
+}
+
+.Pacordion4{
+    margin-left: 6%; 
+    width: 11%; 
+    margin-bottom: -2%; 
+    margin-top: 2%; 
+    color: white; 
+    font-size: 155%
+}
+
+.Pacordion5{
+    margin-left: 6%; 
+    width: 11%; 
+    margin-bottom: -2%; 
+    margin-top: 2%; 
+    color: white; 
+    font-size: 155%
+}
+
 /*matriz de peligros*/
 
 .bg-matriz-peligro {
@@ -1277,8 +1317,6 @@ video:focus {
 
 .act{
     width: 28%;
-    margin-left: 12%;
-    margin-top: 11%;
 }
 
 .ins{
@@ -1525,6 +1563,10 @@ video:focus {
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.objetivoG{
+    width: 80%;
 }
 
 /*riesgos y oprtunidades*/
@@ -3855,11 +3897,11 @@ button.btn-sm {
 
 .headerOpc {
     position: fixed;
-    top: 0;
+    margin-top: -5.1%;
     right: -400px;
     max-width: 400px;
     width: 100%;
-    height: calc(100vh - 1px);
+    height: calc(100vh - 0px);
     background: #fff;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
     padding: 25px;

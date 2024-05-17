@@ -214,7 +214,7 @@ video:focus {
 /*fondo triangulo iziquierda degrade*/
 .bg-generalidades-empresa {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado.png);
+    background-image: url(../img/);
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
@@ -241,7 +241,7 @@ video:focus {
 /*fondo triagulos lateral derecha  mpa*/
 .bg-mapa1 {
     background-color: #133450; /* Color azul petróleo */
-    /*background-image: url(../img/triangulo-degradado-derecha.jpg);*/
+    /*background-image: url(../img/triangulo-degradado-derecha.png);*/
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -395,7 +395,7 @@ video:focus {
 
 /*procesos del sistema de gestion*/
 .bg-procesogestion {
-    background-image: url(../imagenes/proceso-gestion.JPG) ;
+    background-image: url(../imagenes/proceso-gestion.png) ;
     background-color: #133450; /* Color blanco */
     background-repeat: no-repeat;
     background-size: cover;
@@ -510,7 +510,7 @@ video:focus {
 }
 
 .bg-propuesta {
-    background-image: url(../imagenes/propuesta-valor.jpg) ;
+    background-image: url(../imagenes/propuesta-valor.png) ;
     /*background-color: #133450; /* Color blanco */
     background-repeat: no-repeat;
     background-size: cover;
@@ -637,7 +637,7 @@ video:focus {
 
 .bg-certificacion1 {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -663,7 +663,7 @@ video:focus {
 
 .bg-certificacion3 {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -689,7 +689,7 @@ video:focus {
 
 .bg-certificado5 {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../imagenes/certificacion-cumplimientos.jpg);
+    background-image: url(../imagenes/certificacion-cumplimientos.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -735,7 +735,7 @@ video:focus {
 /*Política de prevención y promoción de la salud.*/
 
 .bg-politica-promocion {
-    background-image: url(../imagenes/politica-prevencion.JPG) ;
+    background-image: url(../imagenes/politica-prevencion.png) ;
     background-color: #133450; /* Color blanco */
     background-repeat: no-repeat;
     background-size: contain;
@@ -769,7 +769,7 @@ video:focus {
 }
 
 .bg-politica-promocion3 {
-    background-image: url(../imagenes/promocion-salud.jpg) ;
+    background-image: url(../imagenes/promocion-salud.png) ;
     background-color: #133450; /* Color blanco */
     background-repeat: no-repeat;
     background-size: contain;
@@ -857,7 +857,7 @@ video:focus {
 }
 
 .bg-copasst1 {
-    background-image: url(../imagenes/copasst.jpg);
+    background-image: url(../imagenes/copasst.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
@@ -881,7 +881,7 @@ video:focus {
 
 .bg-copasst3 {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -910,7 +910,7 @@ video:focus {
 
 .bg-comite-convivencia1 {
     background-color: #fff; /* Color blanco */
-    background-image: url(../imagenes/comite-convivencia.jpg);
+    background-image: url(../imagenes/comite-convivencia.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
@@ -955,7 +955,7 @@ video:focus {
 
 .bg-funciones1 {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -971,7 +971,7 @@ video:focus {
 
 .bg-convivencia {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -998,7 +998,7 @@ video:focus {
 /*fondo triagulos lateral derecha  plan de emergencia*/
 .bg-planem {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1140,7 +1140,7 @@ video:focus {
 }
 
 .bg-matriz-peligro1 {
-    background-image: url(../imagenes/matriz-peligro.jpg);
+    background-image: url(../imagenes/matriz-peligro.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
@@ -1164,7 +1164,7 @@ video:focus {
 
 .bg-procedimientos {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1255,7 +1255,7 @@ video:focus {
 
 .bg-deberes {
     background-color: #fff;
-    background-image: url(../imagenes/derechos-deberes.jpg);
+    background-image: url(../imagenes/derechos-deberes.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
@@ -1268,7 +1268,7 @@ video:focus {
 
 .bg-derechos {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1327,7 +1327,7 @@ video:focus {
 
 .bg-inseguro {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1353,7 +1353,7 @@ video:focus {
 
 .bg-insegura {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1400,7 +1400,7 @@ video:focus {
 
 .bg-clasificacion {
     background-color: #133450; /* Color azul petróleo */
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1457,7 +1457,7 @@ video:focus {
 
 .bg-colores2 {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1677,7 +1677,7 @@ video:focus {
 
 .bg-desarrollo-tareas {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1848,7 +1848,7 @@ video:focus {
 
 .bg-brigada {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -2147,7 +2147,7 @@ video:focus {
 
 .bg-brigada {
     background-color: #133450;
-    background-image: url(../img/triangulo-degradado-derecha.jpg);
+    background-image: url(../img/triangulo-degradado-derecha.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -2627,7 +2627,7 @@ video:focus {
 
         /*fondo estrucutra secciones*/
         .divided-background-estruc {
-            background-image: url(../img/fondo-estructura-secciones.jpg);
+            background-image: url(../img/fondo-estructura-secciones.png);
             position: absolute;
 			width: 100%;
 			height: 100vh;
@@ -2853,7 +2853,7 @@ video:focus {
                 padding: 1%;
             } 
             .bg-blancofondominera {
-                background-image: url(../img/fondo-minero24.jpg) ;
+                background-image: url(../img/fondo-minero24.png) ;
                 background-color: #fff; /* Color blanco */
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -3420,7 +3420,7 @@ video:focus {
     width: 100%; /* Ancho del contenedor */
     height: 100vh; /* Altura del contenedor al 100% de la altura del viewport */
     overflow: hidden; /* Para asegurarte de que no haya desbordamiento */
-    background-image: url(../img/mapbg.jpg);
+    background-image: url(../img/mapbg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

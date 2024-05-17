@@ -5,7 +5,11 @@ $usuario = $_SESSION['usuario'];
 $permiso = $_SESSION['type'];
 if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
 
-    
+    echo "<script language='JavaScript'>
+    alert('Error: Debes iniciar sesion primero ');
+    location.assign('../includes/sesion/login.php');
+    </script>";
+    die();
 } ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +22,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sistema De Inventario | Mi Plaza Autoservicio</title>
+    <title>Administrador</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

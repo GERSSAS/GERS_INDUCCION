@@ -1,54 +1,51 @@
-<!-- <?php 
-	require('../../../functions_helpers.php'); /*load helper*/
-	check_session(); /*check session by employee */
-	$course_code = $_GET['course_code']; /* recibir el código del curso */
-	//$module_id        = __my_simple_crypt__($_GET['module'], 'd');
-	$module_id = 344;
-	$unique_course_id = check_permission_employee_course($course_code); /* Comprobar si el empleado tiene acceso al curso*/
-	$extension_url = "?course_code=" . $course_code; /* variable url para pasar el código del curso*/
-	$progress = progress_courses($course_code,$module_id);
-	$valor_minimo_progreso = get_porcentage($course_code);
-	@$CI->session->set_userdata('category_es',$progress[0]['category_es']);
-	@$CI->session->set_userdata('porcentaje_min_eva',$progress[0]['porcentaje_min_eva']);
-?> -->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--library bootstrap v.5.0.2-->
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-grid.css">
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-reboot.css">
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-utilities.css">
-	<script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.esm.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap-utilities.css">
+	<script src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="../assets/bootstrap/js/bootstrap.esm.js"></script>
+	<script src="../assets/bootstrap/js/bootstrap.js"></script>
 	<!--library cascading style sheets-->
-	<link rel="stylesheet" type="text/css" href="assets/css/all.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/styleSlider.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/all.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/styleSlider.css">
 </head>
 <body class="darkStyle">
 	<!--header-->
 	<div class="contentHeader">
 		<div>
-			<img src="assets/imagenes/logo_1981png.png">
-			<div></div>
-			<button id="home"></button>
-			<div class="txPg"></div>
-			<i class="fas fa-bars"></i>
+			<img class="logoTop" src="../assets/imagenes/GERS-I.png">
+			<div><p style="text-align: left; color: white;" id="breadcrumb" ></p></div>
+			<!-- button home -->
+			<div>
+				<button id="home" onclick="progCircle(1);">
+					<i class="fas fa-home"></i>
+				</button>
+			</div>
+			<!-- progress counter -->
+			<div class="txPg">
+				<span id="textProg">1</span> / <span id="nSlider"></span>
+			</div>
+			<i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
+            <img class="app" src="../assets/imagenes/img-appgers.png">
 		</div>
 		<!--menu-->
 		<div class="headerOpc">
 			<i class="fas fa-times"></i>
 			<br>
-			<h1 style="color: var(--secondary) !important"></h1>Hola! <b><?= ucwords($CI->session->userdata('employee_data')['fullname']); ?></b></h1>
-			<!-- <h1>Hola! <b>Nombre user</b></h1> -->
+			<!-- <h1>Hola! <b><?= ucwords($CI->session->userdata('employee_data')['fullname']); ?></b></h1> -->
+			<h1>Hola! <b>Nombre user</b></h1>
 			<h5>Bienvenido a su Ruta de Aprendizaje!</h5>
 			<div class="headerProg">
-				<p><b>Progreso: </b><span id="course-progress"><strong>
-					100%</span></strong></p>
+			    <p><b>Progreso: </b><span id="course-progress"><strong>
+				<?= $progress[0]['course_progress'];?>%</span></strong></p>
 			</div>
 			<hr>
 			<ul>
@@ -57,22 +54,22 @@
 					<li><i class="fas fa-caret-right"></i> Presentación</li>
 				</a>
 				<a href="modulo.html" class="act">
-				<!-- <a href="modulo.php?course_code=<?= $course_code; ?>" > -->
+				<!-- <a href="modulo.php?course_code=<?= $course_code; ?>" class="act"> -->
 					<li><i class="fas fa-caret-right"></i> Contenido</li>
 				</a>
 				<a href="quiz.html">
-				<!-- <a href="quiz.php?course_code=<?= $course_code; ?>" class="act"> -->
+				<!-- <a href="quiz.php?course_code=<?= $course_code; ?>"> -->
 					<li><i class="fas fa-caret-right"></i> Evaluación</li>
 				</a>
 			</ul>
 			<hr>
 			<ul>
 				<a href="index.html">
-				<!-- <a href="../../../login.php"> -->
+				<!-- <a href="../../../../courses/login.php"> -->
 					<li><i class="fas fa-caret-right"></i> Mis cursos</li>
 				</a>
 				<a href="modulo.html">
-				<!-- <a href="../../../logout.php"> -->
+				<!-- <a href="../../../../courses/logout.php"> -->
 					<li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
 				</a>
 			</ul>

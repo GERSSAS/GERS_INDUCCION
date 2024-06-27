@@ -31,8 +31,21 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Telefono</label><br>
-                                <input type="tel" name="telefono" id="telefono" class="form-control" required>
+                                <label for="password">Área</label><br>
+                                <select name="area" id="area" class="form-control" required>
+                                    <option >Selecciona una opcion</option>
+                                    <option >Administración</option>
+                                    <option >Comercial</option>
+                                    <option >Diseño e Invertorias</option>
+                                    <option >NEPLAN</option>
+                                    <option >E. Internacionales</option>
+                                    <option >Estudios</option>
+                                    <option >PAC</option>
+                                    <option >Soluciones Integrales de Equipos</option>
+                                    <option >Proyecto GIS</option>
+                                    <option >Eficiencia y Calidad</option>
+
+                                </select>
                             </div>
                         </div>
 
@@ -57,8 +70,9 @@
                                 <label for="username">Roles</label><br>
                                 <select name="id_rol" id="id_rol" class="form-control" required>
                                     <option value="">Selecciona una opcion</option>
-                                    <option value="1">Administrador</option>
-                                    <option value="2">Empleado</option>
+                                    <option value="1">Master</option>
+                                    <option value="2">Administrador</option>
+                                    <option value="3">Empleado</option>
 
                                 </select>
                             </div>
@@ -94,7 +108,7 @@
             var datos = new FormData();
             datos.append('usuario', $('#usuario').val())
             datos.append('correo', $('#correo').val())
-            datos.append('telefono', $('#telefono').val())
+            datos.append('area', $('#area').val())
             datos.append('password', $('#password').val())
             datos.append('password2', $('#password2').val())
             datos.append('id_rol', $('#id_rol').val())

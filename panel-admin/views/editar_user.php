@@ -28,16 +28,30 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Telefono</label><br>
-                                <input type="tel" name="telefono" id="telefono" class="form-control" value="<?php echo $fila['telefono']; ?>" required>
+                                <label for="password">Área</label><br>
+                                <select type="are" name="area" id="area" class="form-control" value="<?php echo $fila['area']; ?>" required>
+                                    <option >Selecciona una opcion</option>
+                                    <option >Administración</option>
+                                    <option >Comercial</option>
+                                    <option >Diseño e Invertorias</option>
+                                    <option >NEPLAN</option>
+                                    <option >E. Internacionales</option>
+                                    <option >Estudios</option>
+                                    <option >PAC</option>
+                                    <option >Soluciones Integrales de Equipos</option>
+                                    <option >Proyecto GIS</option>
+                                    <option >Eficiencia y Calidad</option>
+
+                                </select>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="username">Rol de Usuario</label><br>
                                 <select name="id_rol" id="id_rol" class="form-control" required>
-                                    <option <?php echo $fila['id_rol'] === '1' ? 'selected' : ''; ?> value="1">Administrador</option>
-                                    <option <?php echo $fila['id_rol'] === '2' ? 'selected' : ''; ?> value="2">Empleado</option>
+                                    <option <?php echo $fila['id_rol'] === '1' ? 'selected' : ''; ?> value="1">Master</option>
+                                    <option <?php echo $fila['id_rol'] === '2' ? 'selected' : ''; ?> value="2">Administrador</option>
+                                    <option <?php echo $fila['id_rol'] === '3' ? 'selected' : ''; ?> value="3">Empleado</option>
                                 </select>
                             </div>
                         </div>
@@ -79,7 +93,7 @@
                 if (response === "correcto") {
                     alert("El registro se ha actualizado correctamente");
                     setTimeout(function() {
-                        location.assign('usuarios.php');
+                        window.location.href = ('usuarios.php');
                     }, 2000);
                 } else {
                     alert("Ha ocurrido un error al actualizar el registro");

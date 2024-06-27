@@ -18,11 +18,11 @@
         <div id="login"></div>
         <div class="row justify-content-center align-items-center min-vh-100">
             <div id="login-box" class="col-12 col-md-8 col-lg-6">
-                <h2 class="text-center">Mi Plaza Autoservicio</h2>
+                <h2 class="text-center">GERS S.A.S</h2>
                 <p class="text-center">Ingrese su usuario y contraseña para iniciar sesión</p>
                 <div id="alert">
                 </div>
-                <form class="row g-3 needs-validation" novalidate id="loginForm" name="loginData" action="validar.php" method="POST">
+                <form class="row g-3 needs-validation" novalidate id="loginForm" name="loginData" action="validar.php" action="validar_admin.php" method="POST">
                     <div class="form-group">
                         <label for="usuario" class="form-label">Usuario</label>
                         <input type="text" id="usuario" name="usuario" class="form-control" required>
@@ -43,7 +43,6 @@
         </div>
     </div>
     <script src="../../js/login.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lcb9nknAAAAAGF7kYkpuYU_9nfpA1j8rM1rq8bd"></script>
 </body>
 
 </html>

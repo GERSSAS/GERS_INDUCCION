@@ -26,7 +26,7 @@
                                 <tr>
                                     <th>Usuario</th>
                                     <th>Correo</th>
-                                    <th>Telefono</th>
+                                    <th>Área</th>
                                     <th>Rol</th>
                                     <th>Fecha de Modificacion</th>
                                     <th>Acciones</th>
@@ -42,7 +42,7 @@
                                     <tr>
                                         <td><?php echo $fila['usuario']; ?></td>
                                         <td><?php echo $fila['correo']; ?></td>
-                                        <td><?php echo $fila['telefono']; ?></td>
+                                        <td><?php echo $fila['area']; ?></td>
                                         <td><?php echo $fila['id_rol']; ?></td>
                                         <td><?php echo $fila['fecha']; ?></td>
                                         <td>

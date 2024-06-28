@@ -92,13 +92,14 @@
             datos.append('usuario', $('#usuario').val())
             datos.append('correo', $('#correo').val())
             datos.append('area', $('#area').val())
+            datos.append('password', $('#password').val())
+            datos.append('password2', $('#password2').val())
             datos.append('id_rol', $('#id_rol').val())
-            console.log(datos);
+
             fetch('../includes/sesion/validar_admin.php', {
                 method: 'POST',
                 body: datos,
             }).then((response) => response.json()).then((response => {
-                console.log(response)
                 confirmation(response);
             }))
 
@@ -106,17 +107,18 @@
     });
 
     function confirmation(r) {
-        if (r === 1) {
+        if (r === 'success') {
             Swal.fire({
                 'title': '¡Mensaje!',
                 'text': 'Usuario Registrado',
                 'icon': 'success',
                 'showConfirmButton': 'false',
-                'timer': '1500'
+                'timer': 1500
             }).then(function() {
                 window.location = "useradmin.php";
             });
-        } else if (r === 'error') {
+        }
+        if (r === 'error') {
             Swal.fire({
                 'title': 'Error',
                 'text': 'No se creo el usuario',
@@ -130,7 +132,13 @@
                 'icon': 'error'
             })
         }
-        
+        if (r === 'pass') {
+            Swal.fire({
+                'title': 'Error',
+                'text': 'Las contraseñas no coinciden',
+                'icon': 'error'
+            })
+        }
 
 
     }

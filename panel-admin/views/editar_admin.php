@@ -81,10 +81,16 @@
             data: datosFormulario,
             dataType: "json",
             success: function(response) {
-                console.log(response);
-                if (response) {
-                    alert("El registro se ha actualizado correctamente");
-                   
+                if (response === "correcto") {
+                    Swal.fire({
+                'title': '¡Mensaje!',
+                'text': 'El registro se ha actualizado correctamente',
+                'icon': 'success',
+                'showConfirmButton': 'false',
+                'timer': 1500
+            }).then(function() {
+                window.location = "useradmin.php";
+            });
                 } else {
                     alert("Ha ocurrido un error al actualizar el registro");
                 }

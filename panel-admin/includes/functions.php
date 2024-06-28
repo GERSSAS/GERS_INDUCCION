@@ -3,33 +3,14 @@
 if (isset($_POST['accion'])) {
     switch ($_POST['accion']) {
             //casos de registros
-        case 'insertar_categoria':
-            insertar_categoria();
-            break;
-
-        case 'insertar_proveedor':
-            insertar_proveedor();
-            break;
-
-        case 'insertar_inventario':
-            insertar_inventario();
-            break;
-
-        case 'editar_inv':
-            editar_inv();
-            break;
-
-        case 'editar_prov':
-            editar_prov();
-            break;
-
-        case 'editar_cat':
-            editar_cat();
-            break;
 
         case 'editar_user':
-            editar_user();
+            editar_admin();
             break;
+
+            case 'editar_admin':
+                editar_admin();
+                break;
 
         case 'editar_perfil':
             editar_perfil();
@@ -37,54 +18,7 @@ if (isset($_POST['accion'])) {
     }
 }
 
-function insertar_categoria()
-{
-    global $conexion;
-    extract($_POST);
-    include "db.php";
 
-    $consulta = "INSERT INTO categorias (categoria) VALUES ('$categoria')";
-    $resultado = mysqli_query($conexion, $consulta);
-
-    if ($resultado) {
-        $response = array(
-            'status' => 'success',
-            'message' => 'Los datos se guardaron correctamente'
-        );
-    } else {
-        $response = array(
-            'status' => 'error',
-            'message' => 'Ocurrió un error inesperado'
-        );
-    }
-
-    echo json_encode($response);
-}
-
-function insertar_proveedor()
-{
-    global $conexion;
-    extract($_POST);
-    include "db.php";
-
-    $consulta = "INSERT INTO proveedores(name,r_social, direccion, telefono, nit, correo) 
-    VALUES ('$name', '$r_social','$direccion','$telefono','$nit','$correo')";
-    $resultado = mysqli_query($conexion, $consulta);
-
-    if ($resultado) {
-        $response = array(
-            'status' => 'success',
-            'message' => 'Los datos se guardaron correctamente'
-        );
-    } else {
-        $response = array(
-            'status' => 'error',
-            'message' => 'Ocurrió un error inesperado'
-        );
-    }
-
-    echo json_encode($response);
-}
 
 function insertar_inventario()
 {
@@ -127,68 +61,29 @@ function insertar_inventario()
 }
 
 
-function editar_inv()
-{
-    require_once("db.php");
 
-    extract($_POST);
-
-
-    $consulta = "UPDATE inventario SET codigo = '$codigo', producto = '$producto', 
-        compra = '$compra',  venta = '$venta', existencia = '$existencia',
-		minimo = '$minimo', unidad='$unidad', id_categoria = '$id_categoria' WHERE id = '$id' ";
-    $resultado = mysqli_query($conexion, $consulta);
-
-    if ($resultado) {
-        echo json_encode("correcto");
-    } else {
-        echo json_encode("error");
-    }
-}
-
-function editar_prov()
-{
-    require_once("db.php");
-
-    extract($_POST);
-
-
-    $consulta = "UPDATE proveedores SET name = '$name', r_social = '$r_social', 
-    direccion = '$direccion',  telefono = '$telefono', nit = '$nit', correo = '$correo' WHERE id = '$id' ";
-    $resultado = mysqli_query($conexion, $consulta);
-
-    if ($resultado) {
-        echo json_encode("correcto");
-    } else {
-        echo json_encode("error");
-    }
-}
-
-function editar_cat()
-{
-    require_once("db.php");
-
-    extract($_POST);
-
-
-    $consulta = "UPDATE categorias SET categoria = '$categoria' WHERE id = '$id' ";
-    $resultado = mysqli_query($conexion, $consulta);
-
-    if ($resultado) {
-        echo json_encode("correcto");
-    } else {
-        echo json_encode("error");
-    }
-}
 
 function editar_user()
 {
     require_once("db.php");
     extract($_POST);
-    $password = trim($_POST['password']);
-    $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 5]);
-    $consulta = "UPDATE users SET usuario = '$usuario', correo = '$correo', password = '$password',
-		telefono='$telefono', id_rol='$id_rol' WHERE id = '$id' ";
+    $consulta = "UPDATE users SET usuario = '$usuario', correo = '$correo',
+		area='$area', id_rol='$id_rol' WHERE id = '$id'";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if ($resultado) {
+        echo json_encode( $resultado);
+    } else {
+        echo json_encode( $resultado);
+    }
+}
+
+function editar_admin()
+{
+    require_once("db.php");
+    extract($_POST);
+    $consulta = "UPDATE usuarios SET usuario = '$usuario', correo = '$correo',
+		area='$area', id_rol='$id_rol' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -210,4 +105,14 @@ function editar_perfil()
     if ($resultado === false) {
         echo json_encode("error");
     }
+}
+
+function generateRandomPassword($length = 12) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()';
+    $charactersLength = strlen($characters);
+    $randomPassword = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomPassword .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomPassword;
 }

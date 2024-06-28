@@ -94,7 +94,7 @@
 			<hr>
 			<ul>
 				<li><a href="../../../../courses/login.php"> <i class="fas fa-caret-right"></i> Mis cursos</a></li>
-				<li><a href="../../../../courses/logout.php"> <i class="fas fa-caret-right"></i> Cerrar sesión</a></li>
+				<li><a href="cerrars.php"> <i class="fas fa-caret-right"></i> Cerrar sesión</a></li>
 			</ul>
 			<span class="infSof">© Sofactia. powered by Unydos</span>
 		</div>

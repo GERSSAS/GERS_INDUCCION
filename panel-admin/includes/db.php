@@ -3,7 +3,7 @@
 $host = "database";
 $user = "root";
 $pass = "docker";
-$namedb = "komorebi1"; 
+$namedb = "administrador"; 
 
 
 $conexion = mysqli_connect($host, $user, $pass, $namedb);

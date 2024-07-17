@@ -87,14 +87,15 @@
 			</div>
 			<hr>
 			<ul>
-				<li><a href="index.php"> <i class="fas fa-caret-right"></i> Presentación</a></li>
-				<li><a href="modulo.php<?= isset($course_code) ? '?course_code=' . $course_code : ''; ?>" class="act"><i class="fas fa-caret-right"></i> Contenido</a></li>
-				<li><a href="quiz.php<?= isset($course_code) ? '?course_code=' . $course_code : ''; ?>"><i class="fas fa-caret-right"></i> Evaluación</a></li>
+				<li><a href="../view/index.php"> <i class="fas fa-caret-right"></i> Presentación</a></li>
+				<li><a href="../view/seccion1.php" class="act"><i class="fas fa-caret-right"></i> Sección 1</a></li>
+				<li><a href="../view/seccion2.php"><i class="fas fa-caret-right"></i> Sección 2</a></li>
+				<li><a href="../view/seccion3.php"><i class="fas fa-caret-right"></i> Sección 3</a></li>
 			</ul>
 			<hr>
 			<ul>
-				<li><a href="../../../../courses/login.php"> <i class="fas fa-caret-right"></i> Mis cursos</a></li>
-				<li><a href="cerrars.php"> <i class="fas fa-caret-right"></i> Cerrar sesión</a></li>
+				<li><a href="../view/quiz.php"> <i class="fas fa-caret-right"></i> Evaluación</a></li>
+				<li><a href="../view/cerrars.php"> <i class="fas fa-caret-right"></i> Cerrar sesión</a></li>
 			</ul>
 			<span class="infSof">© Sofactia. powered by Unydos</span>
 		</div>

@@ -38,7 +38,7 @@
                 </form>
                 <br>
 
-                <p class="text-center">¿Olvidaste tu contraseña? <a href="../../../index/index.php">regresar al inicio</a></p>
+                
             </div>
         </div>
     </div>

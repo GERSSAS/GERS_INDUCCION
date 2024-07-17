@@ -60,7 +60,7 @@ if (isset($_POST['login'])) {
 
                         // Devolver una respuesta JSON con la redirección
                         $response['status'] = 'success';
-                        $response['redirect'] = '../../../view/index.php';
+                        $response['redirect'] = '../includes/sesion/login.php';
                     } else {
                         $response['status'] = 'error';
                         $response['message'] = 'Contraseña incorrecta';

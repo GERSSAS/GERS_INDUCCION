@@ -1,4 +1,8 @@
-   <!--Inicio Seccion 01-->
+<?php
+include "../view/header.php";
+?>
+
+<!--Inicio Seccion 01-->
     <div class="container Seccion1">
         <div class="row">
             <div>

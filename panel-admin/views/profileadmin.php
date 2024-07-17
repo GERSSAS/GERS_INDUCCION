@@ -1,4 +1,4 @@
-<?php include "../includes/header.php"; ?>
+<?php include "../includes/hadmin.php"; ?>
 <?php include "../includes/db.php"; ?>
 <?php
 error_reporting(0);
@@ -45,7 +45,7 @@ if ($usuarios->num_rows > 0) {
                 <h1>Perfil</h1>
                 <nav>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="usuarios.php">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="useradmin.php">Inicio</a></li>
                         <li class="breadcrumb-item active">Informacion Personal</li>
                     </ol>
                 </nav>

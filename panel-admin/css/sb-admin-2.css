@@ -165,7 +165,7 @@ a {
 }
 
 a:hover {
-  color: #c91f1fcf;
+  color: #022249;
   text-decoration: underline;
 }
 
@@ -11257,7 +11257,7 @@ form.user .btn-user {
   content: attr(data-text);
   position: absolute;
   left: -2px;
-  text-shadow: 1px 0 #8e0a0ac9;
+  text-shadow: 1px 0 #022249;
   top: 0;
   color: #5a5c69;
   background: #f8f9fc;

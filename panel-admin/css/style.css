@@ -33,13 +33,13 @@ p {
 }
 
 .btn-primary {
-    background-color:  #de1717;
-    border-color: #de1717;
+    background-color:   #022249;
+    border-color:  #022249;
 }
 
 .btn-primary:hover {
-    background-color: #de1717;
-    border-color: #de1717;
+    background-color:  #022249;
+    border-color:  #022249;
 }
 a{
     text-decoration: none;

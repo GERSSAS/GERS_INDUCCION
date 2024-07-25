@@ -1,12 +1,9 @@
 <?php
-error_reporting(0);
-session_start();
-$usuario = $_SESSION['usuario'];
-$permiso = $_SESSION['type'];
-if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
-    
-    
-} ?>
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+require_once '../includes/sesion/session_check.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 

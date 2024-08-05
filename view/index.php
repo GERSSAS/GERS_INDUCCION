@@ -136,7 +136,7 @@
 <body>
 	<div>
 		<div class="contInd">
-			<img src="../assets/imagenes/image.png" style="margin-top: 5%;">
+			<img src="../assets/imagenes/gers-home.png" style="margin-top: 5%;">
 			<p class="titulo">Inducción Corporativa</p>
 		</div>
 		<div class="fd"></div>

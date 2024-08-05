@@ -1,6 +1,11 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+include "../includes/header.php";
+require_once '../includes/sesion/session_check.php';
+?>
 
-
-    <?php include "../includes/header.php"; ?>
 
 
     <body id="page-top">

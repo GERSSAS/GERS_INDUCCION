@@ -73,7 +73,8 @@
 					<li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
 				</a>
 			</ul>
-			<span class="infSof">© Sofactia. powered by Unydos</span>
+			<span class="infSof">© GERS SAS — Todos los derechos reservados.<br>
+			Desde 1981 hasta el presente.</span>
 		</div>
 	</div>
 

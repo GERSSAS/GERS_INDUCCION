@@ -45,13 +45,13 @@ if (isset($_POST)) {
             $mail->isSMTP();                                            // Usar SMTP
             $mail->Host       = 'smtp.gmail.com';                     // Configurar el servidor SMTP para enviar a través de Gmail
             $mail->SMTPAuth   = true;                                   // Habilitar autenticación SMTP
-            $mail->Username   = 'dany.pechene@gers.com';                     // Nombre de usuario SMTP
-            $mail->Password   = '2005Pilarcoqui';                               // Contraseña SMTP
+            $mail->Username   = 'noreply@gers.com';                     // Nombre de usuario SMTP
+            $mail->Password   = 'rvjvtfiuuihubecb';                               // Contraseña SMTP
             $mail->SMTPSecure = 'ssl';            // Habilitar cifrado TLS implícito
             $mail->Port       = 465;                                    // Puerto TCP para conectar; usa 587 si has configurado SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS
 
             // Configurar el remitente y el destinatario
-            $mail->setFrom('dany.pechene@gers.com', 'GERS S.A.S');
+            $mail->setFrom('noreply@gers.com', 'GERS S.A.S');
             $mail->addAddress($correo, $usuario);     // Añadir un destinatario
 
             // Contenido del correo

@@ -2,6 +2,9 @@
 require_once("../db.php");
 
 header('Content-Type: application/json');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
 
 $response = array();
 
@@ -23,6 +26,8 @@ if (isset($_POST['login'])) {
                 session_start();
                 $_SESSION['usuario'] = $row['usuario'];
                 $_SESSION['id_rol'] = $row['id_rol'];
+                $_SESSION['loggedin'] = true;
+                $_SESSION['last_activity'] = time();
 
                 // Devolver una respuesta JSON con la redirección
                 if ($row['id_rol'] == 1) {
@@ -57,10 +62,12 @@ if (isset($_POST['login'])) {
                         session_start();
                         $_SESSION['usuario'] = $row2['usuario'];
                         $_SESSION['id_rol'] = $row2['id_rol'];
+                        $_SESSION['loggedin'] = true;
+                        $_SESSION['last_activity'] = time();
 
                         // Devolver una respuesta JSON con la redirección
                         $response['status'] = 'success';
-                        $response['redirect'] = '../includes/sesion/login.php';
+                        $response['redirect'] = '../../../view/index.php';
                     } else {
                         $response['status'] = 'error';
                         $response['message'] = 'Contraseña incorrecta';

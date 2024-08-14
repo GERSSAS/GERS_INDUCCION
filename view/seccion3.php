@@ -690,20 +690,16 @@
                 <div class="col-lg-6 col-md-12">
                     <h1 style="color: var(--white); margin-top: 8%; text-align: center; margin-left: 20%;">Estudios de sistemas eléctricos.</h1> 
                     <ul  style="width: 80%; margin-top: 2%;  margin-left: 20%;">
+                        <li>Modelamiento de sistemas eléctricos en  software de simulación.</li>
                         <li>Arco eléctrico (Arc Flash).</li>
-                        <li>Arranque de motores.</li>
                         <li>Cálculo de ajustes y coordinación de  protecciones eléctricas.</li>
-                        <li>Estudio de conexión de centrales  generadoras y proyectos eléctricos.</li>
+                        <li>Estudio de conexión para proyectos de generación de energía renovable y convencional.</li>
                         <li>Deslastre de carga.</li>
                         <li>Estabilidad transitoria, tensión y pequeña  señal.</li>
-                        <li>Estudio de proyección de demanda y análisis  de operación para industrias.</li>
-                        <li>Evaluación económica de proyectos  eléctricos.</li>
                         <li>Flujos de carga.</li>
                         <li>Cortocircuito.</li>
                         <li>Pérdidas en sistemas eléctricos.</li>
-                        <li>Planeación de sistemas eléctricos.</li>
-                        <li>Saturación de transformadores de corriente.</li>
-                        <li>Modelamiento de sistemas eléctricos en  software de simulación. </li>
+                        <li>Estudios de compensación reactiva. </li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-12 top-slide-1-2" >
@@ -722,26 +718,18 @@
             <div class="col-lg-12 col-md-12 bg-petroleo-triangulo-right">
                 
                 <div class="col-lg-6 col-md-12">
-                    <h1 style="color: var(--white); margin-top: 8%; text-align: center; margin-left: 20%;">Diseño e ingeniería.</h1> 
+                    <h1 style="color: var(--white); margin-top: 8%; text-align: center; margin-left: 20%;">Diseño e interventorías.</h1> 
                     <ul  style="width: 100%; margin-top: 2%;  margin-left: 20%;">
-                        <li>Análisis de riesgo eléctrico.</li>
-                        <li>Apantallamiento.</li>
-                        <li>Civil y estructural asociado a sistemas eléctricos.</li>
-                        <li>Conceptuales, básicos y de detalle.</li>
+                        <li>Conceptuales, básicos y de detalle, electromecánico, civil y de control, medida y protecciones:</li>
+                        <li style="margin-left: 6%;" >Subestaciones eléctricas de media, alta y extra alta tensión.</li>
+                        <li style="margin-left: 6%;" >Líneas de distribución y transmisión  de energía eléctrica de media, alta y extra alta tensión.</li>
+                        <li>Apantallamiento y sistemas de puesta a tierra.</li>
                         <li>Coordinación de aislamiento.</li>
-                        <li>Estudios de impacto ambiental.</li>
-                        <li>Generación de energía eléctrica y cogeneración.</li>
-                        <li>Interventoría de proyectos.</li>
-                        <li>Líneas de distribución de energía eléctrica de  baja y media tensión.</li>
-                        <li>Líneas de transmisión de energía eléctrica  de alta y extra alta tensión.</li>
-                        <li>Servicios auxiliares AC y DC.</li>
-                        <li>Sistemas de control, medida y protección  Sistemas de iluminación.</li>
-                        <li>Sistemas de detección de incendios.</li>
-                        <li>Sistemas de puesta a tierra.</li>
-                        <li>Sistemas eléctricos industriales y comerciales.</li>
-                        <li>Sistemas eléctricos hospitalarios.</li>
+                        <li>Sistemas de iluminación.</li>
                         <li>Sistemas eléctricos para áreas clasificadas a  prueba de explosión.</li>
-                        <li>Subestaciones eléctricas de baja, media,  alta y extra alta tensión.</li>
+                        <li>Interventoría de diseños y de montajes de granjas solares.</li>
+                        <li>Servicios auxiliares AC y DC.</li>
+                        <li>Interventorías CREG 024 (avalados por el C.N.O).</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-12 top-slide-1-2" >
@@ -760,32 +748,21 @@
             <div class="col-lg-12 col-md-12 bg-petroleo-triangulo-right">
                 
                 <div class="col-lg-6 col-md-12">
-                    <h1 style="color: var(--white); margin-top: -10%; text-align: center; margin-left: 61%;">Pruebas, Automatización y Control.</h1> 
-                    <ul  style="width: 77%; margin-top: 5%; margin-left: 20%;">
-                        <li>Pruebas y puesta en servicio a equipos en  sistemas de baja, media y alta tensión.</li>
+                    <h1 style="color: var(--white); margin-top: 6%; text-align: center; margin-left: 61%;">Pruebas, Automatización y Control (PAC).</h1> 
+                    <ul  style="width: 88%; margin-top: 5%; margin-left: 20%;">
+                        <li>Pruebas y puesta en servicio a equipos en sistemas BT, MT y AT.</li>
                         <li>Relés de protección eléctrica.</li>
-                        <li>Interruptores de potencia.</li>
-                        <li>Seccionadores.</li>
-                        <li>TCs, TPs.</li>
-                        <li>Descargadores de sobretensión.</li>
-                        <li>Transformadores de potencia.</li>
-                        <li>Generadores.</li>
+                        <li>Interruptores de potencia y seccionadores.</li>
+                        <li>TCs, TPs y descargadores de sobretensión.</li>
+                        <li>Transformadores de potencia y generadores.</li>
                         <li>Sistemas de servicios auxiliares de AC y DC.</li>
-                        <li>Bancos y cargadores de baterías.</li>
-                        <li>Suministro, diseño y puesta en servicio de  sistemas de control, medida y protección.</li>
-                    </ul>
-                    <ul style="width: 54%; margin-top: -45%; margin-left: 115%;" >
-                        <li>RTU´s, Gateway.</li>
-                        <li>SCADA.</li>
-                        <li>Controladores de bahía.</li>
-                        <li>Gestión de protecciones y medida.</li>
+                        <li>Suministro, diseño y puesta en servicio de sistemas de control, medida y protección.</li>
                         <li>Modernización de subestaciones.</li>
-                        <li>Capacitaciones.</li>
-                        <li>Automatización basada en IEC 61850.</li>
+                        <li>Comisionamiento de subestaciones eléctricas.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-12 top-slide-1-2" >
-                    <img src="../assets/imagenes/pruebas-automatizacion.png"  style="width: 38%; margin-left: 25%; margin-top: 61%;">
+                    <img src="../assets/imagenes/pruebas-automatizacion.png"  style="width: 49%; margin-left: 27%; margin-top: 20%;">
                 </div>
             </div>
           
@@ -800,34 +777,22 @@
             <div class="col-lg-12 col-md-12 bg-petroleo-triangulo-right">
                 
                 <div class="col-lg-6 col-md-12">
-                    <h1 style="color: var(--white); margin-bottom: -3%; text-align: center; margin-left: 73%; margin-top: -10%;">Servicios energéticos.</h1> 
-                    <ul  style="width: 84%; margin-top: 6%; margin-left: 20%;">
-                        <li>Calidad de potencia.</li>
+                    <h1 style="color: var(--white); margin-bottom: -3%; text-align: center; margin-left: 70%; margin-top: 3%;">Eficiencia y calidad de energía.</h1> 
+                    <ul  style="width: 84%; margin-top: 8%; margin-left: 20%;">
+                        <li>Estudios y mediciones de calidad de energía.</li>
                         <li>Cargabilidad de transformadores, motores y acometidas.</li>
                         <li>Chequeo RETIE de instalaciones eléctricas.</li>
-                        <li>Estudios de armónicos – especificación  de filtros.</li>
-                        <li>Estudios de perturbaciones en sistemas eléctricos.</li>
+                        <li>Estudio de armónicos en subestaciones de alta y extra alta tensión.</li>
+                        <li>Mediciones de sistemas de puesta a tierra, resistividad de terreno y  equipotencialidad.</li>
+                        <li>Medición de tensiones de paso y de contacto.</li>
                         <li>Estudios de compensación reactiva.</li>
-                        <li>Levantamiento y actualización de  diagramas unifilares.</li>
-                        <li>Eficiencia Energética.</li>
-                        <li>Asesoría en implementación del sistema  de gestión de energía ISO 50001.</li>
-                        <li>Asesoría en negociación de tarifas de energía.</li>
-                        <li>Asesoría regulatoria.</li>
-                        <li>Caracterización energética.</li>
-                        <li>Evaluación de potenciales de generación  con energías renovables.</li>
-                        <li>Generación de indicadores.</li>
-                    </ul>
-                    <ul style="width: 70%; margin-top: -52%; margin-left: 116%;">
-                        <li>Identificación de oportunidades de  ahorro.</li>
-                        <li>Implementación de sistemas de monitoreo energético.</li>
-                        <li>Sistemas de Puesta a Tierra.</li>
-                        <li>Mediciones de resistencia, resistividad y  equipotencialidad.</li>
-                        <li>Medición de tensiones de paso y de contacto</li>
-                        <li>Pruebas a dispositivos de protección  contra sobretensiones en baja tensión</li>
+                        <li>Levantamiento y/o actualización de diagramas unifilares.</li>
+                        <li>Detección de descargas parciales.</li>
+                        <li>Eficiencia Energética: Asesoría en implementación del sistema  de gestión de energía ISO 50001.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-12 top-slide-1-2" >
-                    <img src="../assets/imagenes/servicios-energeticos.png"  style="width: 37%; margin-left: 37%; margin-top: 67%;">
+                    <img src="../assets/imagenes/servicios-energeticos.png"  style="width: 52%; margin-left: 26%; margin-top: 15%;">
                 </div>
             </div>
           
@@ -842,26 +807,23 @@
             <div class="col-lg-12 col-md-12 bg-petroleo-triangulo-right">
                 
                 <div class="col-lg-6 col-md-12">
-                    <h1 style="color: var(--white); text-align: center;  margin-left: 53%; margin-top: 9%;">Energías Renovables Solares y Eólicas.</h1> 
+                    <h1 style="color: var(--white); text-align: center;  margin-left: 53%; margin-top: 9%;">Energías renovables.</h1> 
                     <ul  style="width: 100%; margin-top: 4%; margin-left: 20%;">
-                        <li>Estudios de Prefactibilidad y de Conexión.</li>
-                        <li>Ingeniería de Interconexión , Ingenierías conceptuales.</li>
-                        <li>Pruebas de verificación curva de carga de planta  conectadas al STN y STR (CON) (GERS-GME Argentina).</li>
-                        <li>Interventorías Ambiental, Civil, Electromecánica, Control.</li>
-                        <li>Dimensionamiento y suministro de centros de control.</li>
-                        <li>Asesoría especializada para contratos de conexión,  negociación en compra/venta de energía, evaluación de  proyectos, evaluación de predios.</li>
-                        <li>Promoción de proyectos con inversionistas.</li>
-                        <li>Debidas diligencias.</li>
-                        <li>Acompañamiento cumplimiento de código de conexión  proyectos Renovables - CNO 1214.</li>
-                        <li>Dimensionamiento y diseño de plantas. </li>
-                        <li>Estudio de coordinación de protecciones para  presentación a XM.</li>
-                        <li>Mediciones de calidad de energía para evaluar  distorsión armónica.</li>
-                        <li>Pruebas y puesta en servicio.</li>
-                        <li>Sistemas de vigilancia de granjas y parques.</li>
+                        <li>Estudios de conexión y prefactibilidad para plantas de generación solares y eólicas.</li>
+                        <li>Ingenierías de interconexión, ingenierías conceptuales básicas y de detalle de subestaciones y líneas asociadas a los parques solares y eólicos.</li>
+                        <li>Avalados por el (C.N.O) para realizar las pruebas de verificación curva de carga en plantas eólicas y solares conectadas al STN, STR y SDL alianza (GERS-GME Argentina).</li>
+                        <li>Interventorías de diseños y montajes de parques solares y eólicos.</li>
+                        <li>Acompañamiento en cumplimiento al código de conexión de proyectos renovables CN0 1214.</li>
+                        <li>Asesorías especializadas en contratos de conexión.</li>
+                        <li>Estudios de coordinación de protecciones para entrada en operación de parques solares y eólicos.</li>
+                        <li>Interventorías en sistemas SAEB (avalados por el C.N.O).</li>
+                        <li>Análisis de capacidades en subestaciones eléctricas. </li>
+                        <li>Comisionamiento y pruebas a parques solares fotovoltaicos y eólicos.</li>
+                        <li>Elaboración curvas IV para parques solares fotovoltaicos.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-12 top-slide-1-2" >
-                    <img src="../assets/imagenes/energias-renovables.png"  style="width: 60%; margin-left: 30%;">
+                    <img src="../assets/imagenes/energias-renovables.png"  style="width: 58%; margin-left: 30%; margin-top: 13%;">
                 </div>
             </div>
           
@@ -876,24 +838,21 @@
             <div class="col-lg-12 col-md-12 bg-petroleo-triangulo-right">
                 
                 <div class="col-lg-6 col-md-12">
-                    <h1 style="color: var(--white); text-align: center;  margin-left: 53%; margin-top: 9%;">Cursos & Webinar Especializados.</h1> 
+                    <h1 style="color: var(--white); text-align: center; width: 176%; margin-left: 65px; line-height: 147%; height: 120px;">Gers academy: Cursos, seminarios y  <br> webinars especializados.</h1> 
                     <ul  style="width: 100%; margin-top: 4%; margin-left: 20%;">
                         <li>Calidad de potencia.</li>
                         <li>Estudios de cortocircuito y estudios  de flujos de carga.</li>
-                        <li>Modelado de sistemas de potencia.</li>
-                        <li>Protecciones en sistemas industriales.</li>
-                        <li>Protecciones en sistemas de  transmisión y distribución.</li>
+                        <li>Protecciones en sistemas industriales, de transmisión y distribución.</li>
                         <li>Protección de generadores.</li>
                         <li>Pruebas de equipos de protecciones.</li>
-                        <li>WEBINAR.</li>
-                        <li>Diseño y análisis de Sistemas de  puesta a tierra.</li>
+                        <li>Diseño y análisis de sistemas de  puesta a tierra.</li>
                         <li>Simulaciones de Arc Flash.</li>
                         <li>Sistema de compensación de  reactivos.</li>
-                        <li>Nuevas tecnologías para control de  sistema de distribución.</li>
+                        <li>Nuevas tecnologías para control de sistemas de distribución.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-12 top-slide-1-2" >
-                    <img src="../assets/imagenes/cursos.png"  style="width: 52%; margin-left: 13%; margin-top: 21%;">
+                    <img src="../assets/imagenes/cursos.png"  style="width: 52%; margin-left: 22%; margin-top: 27%;">
                 </div>
             </div>
           

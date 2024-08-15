@@ -149,15 +149,35 @@ include "../view/seccion1.php";
     }
 
     function changeSlide(step) {
-        currentSlide += step;
-        if (currentSlide < 1) currentSlide = 1;
-        if (currentSlide > totalSlides) currentSlide = totalSlides;
+    currentSlide += step;
+    if (currentSlide < 1) currentSlide = 1;
+    if (currentSlide > totalSlides) currentSlide = totalSlides;
 
-        // Lógica para cambiar la diapositiva
-        // ...
+    // Lógica para cambiar la diapositiva
+    // ...
 
-        updateHeaderProgress();
-    }
+    updateHeaderProgress();
+
+    // Envía el progreso al servidor
+    saveProgress(currentSlide);
+}
+
+function saveProgress(slideNumber) {
+    $.ajax({
+        url: 'view/update_progress.php',
+        method: 'POST',
+        data: {
+            slide_actual: slideNumber
+        },
+        success: function(response) {
+            console.log('Progreso guardado:', response);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error al guardar el progreso:', textStatus, errorThrown);
+        }
+    });
+}
+
 
     // Inicializar el progreso del header
     updateHeaderProgress();

@@ -27,6 +27,7 @@
                                 <th>Área</th>
                                 <th>Rol</th>
                                 <th>Fecha de Modificacion</th>
+                                <th>Progreso</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -43,6 +44,7 @@
                                     <td><?php echo $fila['area']; ?></td>
                                     <td><?php echo $fila['id_rol']; ?></td>
                                     <td><?php echo $fila['fecha']; ?></td>
+                                    <td><?php echo $fila['slide_actual']; ?></td>
                                     <td>
                                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>">
                                             <i class="fa fa-edit "></i>

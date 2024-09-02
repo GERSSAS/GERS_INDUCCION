@@ -1,7 +1,39 @@
 <?php
 include "../view/header.php";
+
+
+// Almacena la diapositiva actual en una variable de PHP
+$slide_actual = 1; // Por defecto, comienza en la primera diapositiva
+
+if (isset($_SESSION['usuario'])) {
+    $usuario = $_SESSION['usuario'];
+
+    // Conectar a la base de datos
+    $conexion = mysqli_connect("database", "root", "docker", "administrador");
+
+    if ($conexion) {
+        // Consulta para obtener la diapositiva actual
+        $query = "SELECT slide_actual FROM usuarios WHERE usuario = '$usuario'";
+        $result = mysqli_query($conexion, $query);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $slide_actual = $row['slide_actual']; // Asigna la última diapositiva vista
+        } else {
+            $slide_actual = 1; // Si no se encuentra registro, empezar desde la primera diapositiva
+        }
+
+        // Cierra la conexión
+        mysqli_close($conexion);
+    } else {
+        echo "Error de conexión a la base de datos.";
+    }
+} else {
+    echo "No se ha iniciado sesión.";
+    exit;
+}
 ?>
-<!-- main.php -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,37 +168,46 @@ include "../view/seccion1.php";
 
 
 <!-- Logic for slides and progress -->
-</script>
-
-<!-- Logic for slides and progress -->
 <script>
-    let currentSlide = 1;
-    const totalSlides = $(".contentModule > div").length;
+    let currentSlide = <?= $slide_actual; ?>; // Iniciar desde la última diapositiva vista
+const totalSlides = document.querySelectorAll(".contentModule > div").length;
 
-    function updateHeaderProgress() {
-        if (typeof window.updateProgressBar === 'function') {
-            window.updateProgressBar(currentSlide, totalSlides);
-        }
+function updateHeaderProgress() {
+    if (typeof window.updateProgressBar === 'function') {
+        window.updateProgressBar(currentSlide, totalSlides);
     }
+}
 
-    function changeSlide(step) {
-        currentSlide += step;
-        if (currentSlide < 1) currentSlide = 1;
-        if (currentSlide > totalSlides) currentSlide = totalSlides;
+function changeSlide(step) {
+    currentSlide += step;
+    currentSlide = Math.max(1, Math.min(currentSlide, totalSlides)); // Asegura que esté dentro de los límites
 
-        // Lógica para cambiar la diapositiva
-        // ...
-
-        updateHeaderProgress();
-    }
-
-    // Inicializar el progreso del header
+    // Lógica para cambiar la diapositiva
+    // Aquí debes implementar la lógica para mostrar y ocultar las diapositivas según `currentSlide`
+    
     updateHeaderProgress();
 
-    // Exponer la función para manejar el cambio de diapositiva
-    window.handleSlideChange = function(step) {
-        changeSlide(step);
-    };
+    // Enviar la diapositiva actual al servidor
+    saveCurrentSlide(currentSlide);
+}
+
+function saveCurrentSlide(slide) {
+    $.ajax({
+        url: '../view/save_slide.php',
+        type: 'POST',
+        data: { slide_actual: slide },
+        success: function(response) {
+            console.log("Progreso guardado: " + response);
+        },
+        error: function(error) {
+            console.error("Error al guardar el progreso: ", error);
+        }
+    });
+}
+
+// Inicializar el progreso del header
+updateHeaderProgress();
+
 </script>
 
 </body>

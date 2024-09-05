@@ -35,7 +35,7 @@ if (isset($_SESSION['usuario'])) {
         mysqli_close($conexion);
     }
 }
-?>
+?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,36 +43,37 @@ if (isset($_SESSION['usuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
 </head>
-<body style="padding-left: 0px !important; padding-right: 0px !important;">
-<!-- content fluid -->
-<div class="container-fluid" style="position: relative; height: 100vh;">
-    <div class="ctMd">
-        <div class="contentModule">
-            <div class="container dividerBg current">
-                <div class="row mx-auto" style="background-color: #003150; width: 100%; height: 100%;">
-                <div class="col-lg-6 col-md-12 left">
-                        <?php
-                        if (!empty($progress['course_progress']) && $progress['course_progress'] >= $valor_minimo_progreso) {
-                        ?>
-                            <h1>QUE APRENDIMOS</h1>
-                            <h6 style="color: #fff;">Por favor haz clic en el botón para comenzar la <br> evaluación del módulo. </h6>
-                            <a href="../view/quiz2.php">
-                                <button class="btn mt-3s">Iniciar</button>
-                            </a>
-                        <?php } else { ?>
-                            <h1>RECUERDA</h1>
-                            <h6 style="color: #fff;">Debes superar el <?= $valor_minimo_progreso; ?>% de la valoración <br> para aprobar el módulo. </h6>
-                        <?php } ?>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <img src="../assets/imagenes/8136206-2.png" style="width: 100%; margin-left: -11%; margin-top: 8%;" >
+    <!--Pantalla estructura tematica-->
+    <div class="container quiz2">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-12 col-md-12">
+                <h1 class="text-center top-movil" style="color: var(--white)">Evaluación <span style="color: var(--grey);"> Corporativa</span></h1>
+            </div>
+            
+            <!-- Columna derecha - azul oscuro -->
+            <div class="col-lg-12 col-md-12">
+                <div class="contenido-central-2">
+                    <div class="col-lg-12 col-md-12 slide-2-elementos">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecomx-JNJiAcIz4YEMw6jK5xcsmTH0Qo9pJWofIipyo8YmZw/viewform?embedded=true" width="640" height="6516" frameborder="0" marginheight="0" marginwidth="0" style=" margin-top: -10%;
+ margin-left: 29%;">Loading…</iframe> 
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
+    <!--Fin estructura temática-->
+
+
+
+<!--end contentmodule -->
 </div>
+<!-- end content slider -->
+    
+</div>
+</div>
+<!-- end content fluid -->   
+
 <!-- library javascript -->
 <script src="../assets/js/sessvars.js"></script>
 <script src="../assets/js/touch-dnd.js"></script>

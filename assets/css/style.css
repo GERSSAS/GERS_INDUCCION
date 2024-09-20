@@ -4177,7 +4177,19 @@ button.btn-sm {
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }
 
-
+.quiz2 {
+    /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+    background-image: url(../imagenes/fondoblues.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
 
 
 

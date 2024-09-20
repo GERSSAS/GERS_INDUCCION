@@ -169,26 +169,41 @@ include "../view/seccion1.php";
 
 <!-- Logic for slides and progress -->
 <script>
-    let currentSlide = <?= $slide_actual; ?>; // Iniciar desde la última diapositiva vista
-const totalSlides = document.querySelectorAll(".contentModule > div").length;
+    const slides = document.querySelectorAll(".contentModule > div");
+const totalSlides = slides.length;
+let currentSlide = <?= $slide_actual; ?>;
+
+// Asegúrate de que currentSlide esté dentro de los límites válidos
+currentSlide = Math.max(1, Math.min(currentSlide, totalSlides));
 
 function updateHeaderProgress() {
-    if (typeof window.updateProgressBar === 'function') {
-        window.updateProgressBar(currentSlide, totalSlides);
-    }
+    const progressBar = document.getElementById('progressBar');
+    const percent = (currentSlide / totalSlides) * 100;
+    progressBar.style.width = percent + '%';
+    progressBar.setAttribute('aria-valuenow', percent);
+    progressBar.innerText = percent.toFixed(0) + '%';
+    document.getElementById('textProg').innerText = currentSlide;
+    document.getElementById('nSlider').innerText = totalSlides;
 }
 
 function changeSlide(step) {
     currentSlide += step;
-    currentSlide = Math.max(1, Math.min(currentSlide, totalSlides)); // Asegura que esté dentro de los límites
+    currentSlide = Math.max(1, Math.min(currentSlide, totalSlides));
 
-    // Lógica para cambiar la diapositiva
-    // Aquí debes implementar la lógica para mostrar y ocultar las diapositivas según `currentSlide`
-    
+    // Ocultar todas las diapositivas
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+
+    // Mostrar la diapositiva actual
+    slides[currentSlide - 1].style.display = 'block';
+
     updateHeaderProgress();
-
-    // Enviar la diapositiva actual al servidor
     saveCurrentSlide(currentSlide);
+
+    // Actualizar visibilidad de los botones
+    document.getElementById('prev').style.display = currentSlide > 1 ? 'block' : 'none';
+    document.getElementById('next').style.display = currentSlide < totalSlides ? 'block' : 'none';
 }
 
 function saveCurrentSlide(slide) {
@@ -196,14 +211,31 @@ function saveCurrentSlide(slide) {
         url: '../view/save_slide.php',
         type: 'POST',
         data: { slide_actual: slide },
+        dataType: 'json',
         success: function(response) {
             console.log("Progreso guardado: " + response);
         },
         error: function(error) {
-            console.error("Error al guardar el progreso: ", error);
+            console.error("Error en la solicitud AJAX: ", error);
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Ocultar todas las diapositivas
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+
+    // Mostrar la diapositiva actual
+    slides[currentSlide - 1].style.display = 'block';
+
+    updateHeaderProgress();
+
+    // Actualizar visibilidad de los botones
+    document.getElementById('prev').style.display = currentSlide > 1 ? 'block' : 'none';
+    document.getElementById('next').style.display = currentSlide < totalSlides ? 'block' : 'none';
+});
 
 // Inicializar el progreso del header
 updateHeaderProgress();

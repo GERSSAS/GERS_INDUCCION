@@ -6,7 +6,6 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 $valor_minimo_progreso = 100; // Porcentaje mínimo para pasar la evaluación
-
 $slide_actual = 1; // Por defecto, comienza en la primera diapositiva
 
 if (isset($_SESSION['usuario'])) {
@@ -17,12 +16,13 @@ if (isset($_SESSION['usuario'])) {
 
     if ($conexion) {
         // Consulta para obtener la diapositiva actual del usuario
-        $query = "SELECT slide_actual FROM usuarios WHERE usuario = '$usuario'";
+        $query = "SELECT slide_actual, quiz_terminado FROM usuarios WHERE usuario = '$usuario'";
         $result = mysqli_query($conexion, $query);
 
         if ($result && mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
             $slide_actual = $row['slide_actual']; // Asigna la última diapositiva vista
+            $quiz_terminado = $row['quiz_terminado']; // Verifica si el quiz ya fue terminado
         }
 
         // Calcular el progreso en porcentaje
@@ -30,6 +30,19 @@ if (isset($_SESSION['usuario'])) {
         $progress = [
             'course_progress' => ($slide_actual / $total_slides) * 100
         ];
+
+        // Si el progreso es del 100% y el quiz no está marcado como terminado
+        if (!empty($progress['course_progress']) && $progress['course_progress'] >= $valor_minimo_progreso && $quiz_terminado == 0) {
+            // Marcar como terminado el quiz
+            $query_terminado = "UPDATE usuarios SET quiz_terminado = 1 WHERE usuario = '$usuario'";
+            mysqli_query($conexion, $query_terminado);
+
+            // Insertar notificación en la base de datos
+            $mensaje = "El usuario con nombre $usuario ha finalizado el quiz.";
+            $query_notificacion = "INSERT INTO notificaciones (id_usuario, mensaje) 
+                                   VALUES ((SELECT id FROM usuarios WHERE usuario = '$usuario'), '$mensaje')";
+            mysqli_query($conexion, $query_notificacion);
+        }
 
         // Cierra la conexión
         mysqli_close($conexion);

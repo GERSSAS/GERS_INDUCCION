@@ -16,7 +16,7 @@ $("#prev").click(function(){
 	}, 300);
 });
 
-// function next - previous ------->
+/* // function next - previous ------->
 function updateItems(delta){
 	// slider module ------->
 	var $items = $('.contentModule').children();
@@ -53,7 +53,7 @@ function updateItems(delta){
 	} else {
 		$('.logoTop').attr("src", '../assets/imagenes/GERS-I.png');
 	}
-}
+} */
 
 
 // function button home ------->

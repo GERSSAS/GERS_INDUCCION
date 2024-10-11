@@ -3,6 +3,16 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 require_once '../includes/sesion/session_check.php';
+// Conexión a la base de datos
+$conexion = mysqli_connect("database", "root", "docker", "administrador");
+
+// Consulta para obtener las notificaciones no leídas
+$query_notificaciones = "SELECT * FROM notificaciones WHERE leido = 0 ORDER BY fecha DESC";
+$result_notificaciones = mysqli_query($conexion, $query_notificaciones);
+
+// Contar el número de notificaciones no leídas
+$num_notificaciones = mysqli_num_rows($result_notificaciones);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +59,7 @@ require_once '../includes/sesion/session_check.php';
 
         
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Pages Collapse Menu
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw  fa-folder-open"></i>
@@ -64,6 +74,7 @@ require_once '../includes/sesion/session_check.php';
                     </div>
                 </div>
             </li>
+            Se implementa a futuro -->
 
             
 
@@ -136,57 +147,49 @@ require_once '../includes/sesion/session_check.php';
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">2+</span>
+                                <span class="badge badge-danger badge-counter">
+                                    <?= $num_notificaciones > 0 ? $num_notificaciones : ''; ?>
+                                </span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Notificaciones
                                 </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Julio 15/2023</div>
-                                        <span class="font-weight-bold">¡Un nuevo informe mensual está listo para descargar!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Julio 20/2023</div>
-                                        <span class="font-weight-bold">¡Se han depositado $290.29 en su cuenta!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Junio 23/2023</div>                                      
-                                        Alerta de gastos: Hemos notado gastos inusualmente altos para su cuenta.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-800" href="#">Cerrar</a>
+
+                                <!-- Mostrar notificaciones dinámicamente -->
+                                <?php if ($num_notificaciones > 0) { ?>
+                                    <?php while ($notificacion = mysqli_fetch_assoc($result_notificaciones)) { ?>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="mr-3">
+                                                <div class="icon-circle bg-primary">
+                                                    <i class="fas fa-info-circle text-white"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="small text-gray-500">
+                                                    <?= date("d/m/Y H:i", strtotime($notificacion['fecha'])) ?>
+                                                </div>
+                                                <span class="font-weight-bold"><?= $notificacion['mensaje'] ?></span>
+                                            </div>
+                                        </a>
+                                    <?php } ?>
+                                <?php } else { ?>
+                                    <a class="dropdown-item text-center small text-gray-800" href="#">No tienes nuevas notificaciones</a>
+                                <?php } ?>
+
+                                <a class="dropdown-item text-center small text-gray-800" href="#">Ver todas las notificaciones</a>
                             </div>
                         </li>
-
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $_SESSION['usuario']; ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    <?php echo $_SESSION['usuario']; ?>
+                                </span>
                                 <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -199,7 +202,7 @@ require_once '../includes/sesion/session_check.php';
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>
-                                    Cerrar Sesion
+                                    Cerrar Sesión
                                 </a>
                             </div>
                         </li>
